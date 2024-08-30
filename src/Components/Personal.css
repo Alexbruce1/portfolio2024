@@ -1,0 +1,69 @@
+.personal-p {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+  
+.shadow-container {
+  position: relative;
+  height: 15em;
+  display: flex;
+  justify-content: space-between;
+  top: -15em;
+  pointer-events: none;
+}
+
+.shadow {
+  height: 100%;
+  width: 40%;
+  pointer-events: none;
+}
+
+.shadow-left {
+  background-image: linear-gradient(to right, #232323, transparent);
+}
+
+.shadow-right {
+  background-image: linear-gradient(to left, #232323, transparent);
+}
+
+.photo-slider-title {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+    
+.image-container {
+  display: flex;
+  overflow-x: scroll;
+  height: 15em;
+}
+
+.image-container:hover > .car-image {
+  animation-play-state: paused;
+}
+
+.car-image {
+  display: flex;
+  cursor: pointer;
+  border-radius: .5em;
+  box-shadow: -2px 4px 10px -5px #111;
+  margin: 1em .5em;
+  animation-name: image;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition-duration: .35s;
+}
+
+.car-image:hover {
+  box-shadow: -2px 4px 10px 0 #111;
+}
+
+@keyframes image {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-152em, 0);
+  }
+}

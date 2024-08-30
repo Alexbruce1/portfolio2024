@@ -1,0 +1,61 @@
+.home-main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-text {
+  padding: 1em 0;
+  margin-right: 2em;
+  max-width: 60%;
+}
+
+.home-headline {
+  font-size: 4em;
+  text-align: left;
+}
+
+.home-p {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.home-image-container {
+  padding: 3em 0;
+  width: 40%;
+}
+
+.profile-img-home {
+  border-radius: 1em;
+  box-shadow: -.5em 1em 2em #111;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.tech-container {
+  border-radius: 1em;
+  background-color: #333;
+  box-shadow: -.5em 1em 2em #111;
+  padding: 2em 0;
+}
+
+.tech-logo-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-group {
+  max-width: 8%;
+  padding: 3em;
+}
+
+.tech-icon {
+  border-radius: 1.5em;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.icon-name {
+  color: #ddd;
+  letter-spacing: 2px;
+}

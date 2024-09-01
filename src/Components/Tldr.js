@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './Tldr.css';
 
 function Tldr() {
+  let d = new Date();
+
   return (
     <div className="Tldr Page">
       <h1 className='page-header'>
@@ -43,6 +45,7 @@ function Tldr() {
         <p className='tldr-p main-paragraph'>
           If you're interested in chatting, please reach out! I'd love to set up a call or a coffee meeting.
         </p>
+        <div className='tldr-message-read'>Read {d.getHours()}:{d.getMinutes()}</div>
       </div>
       <div className='learn-more-button'>
         Learn More

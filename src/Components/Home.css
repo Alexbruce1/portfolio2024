@@ -15,8 +15,8 @@
 }
 
 .home-p {
-  font-weight: 400;
-  font-size: 1.5em;
+  font-weight: var(--main-p-weight);
+  font-size: var(--main-p-size);
 }
 
 .home-image-container {
@@ -26,15 +26,15 @@
 
 .profile-img-home {
   border-radius: 1em;
-  box-shadow: -.5em 1em 2em #111;
+  box-shadow: var(--big-shadow);
   object-fit: contain;
   max-width: 100%;
 }
 
 .tech-container {
   border-radius: 1em;
-  background-color: #333;
-  box-shadow: -.5em 1em 2em #111;
+  background-color: var(--background-accent-color);
+  box-shadow: var(--big-shadow);
   padding: 2em 0;
 }
 
@@ -56,6 +56,6 @@
 }
 
 .icon-name {
-  color: #ddd;
+  color: var(--light-text);
   letter-spacing: 2px;
 }

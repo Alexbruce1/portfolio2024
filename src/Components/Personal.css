@@ -20,11 +20,11 @@
 }
 
 .shadow-left {
-  background-image: linear-gradient(to right, #232323, transparent);
+  background-image: linear-gradient(to right, var(--background-color), transparent);
 }
 
 .shadow-right {
-  background-image: linear-gradient(to left, #232323, transparent);
+  background-image: linear-gradient(to left, var(--background-color), transparent);
 }
 
 .photo-slider-title {

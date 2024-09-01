@@ -1,0 +1,72 @@
+.sidebar {
+  background-color: var(--background-color);
+  position: fixed;
+  box-shadow: var(--shadow-to-the-right);
+  top: 0;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  padding: 1em;
+  width: 15%;
+  font-weight: var(--main-p-weight);
+  font-size: var(--main-p-size);
+}
+
+.sidebar-section {
+  margin: 1em auto;
+  /* font-size: 2em; */
+  padding: .5em 0;
+  text-align: left;
+  /* background-color: green; */
+}
+
+.dark-mode-container {
+  top: 2em;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.dark-mode-slider {
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  width: 80px;
+  background-color: var(--background-accent-color);
+  box-shadow: inset 0 0 7px -5px #ddd;
+  padding: 0;
+  transition-duration: .5s;
+}
+
+.dark-mode-slider-dot {
+  height: 30px;
+  width: 30px;
+  background-color: #ddd;
+  border-radius: 50%;
+  box-shadow: var(--slider-shadow);
+  position: relative;
+  top: var(--dm-slider-dot-top);
+  left: var(--dm-slider-dot-left);
+  transition-duration: .5s;
+  z-index: 1;
+}
+
+.dark-mode-enabled-dot {
+  height: 8px;
+  width: 8px;
+  background-color: lawngreen;
+  border-radius: 50%;
+  position: relative;
+  bottom: 14px;
+  left: 16px;
+  z-index: 0;
+}
+
+.dark-mode-slider-dot:hover {
+  box-shadow: 0 0 8px black;
+}
+
+.dark-mode-text {
+  margin: auto 0;
+  color: var(--accent-blue);
+}

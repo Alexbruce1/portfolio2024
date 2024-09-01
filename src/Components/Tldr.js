@@ -36,13 +36,15 @@ function Tldr() {
         <p className='tldr-section'>1st Job</p>
         <p className='tldr-p main-paragraph'>
           A few months after graduating, I started my first tech job, and joined Aetna Digital as a quality engineer. I strengthened my team's integration testing platform, building tests for new features, and improving tests for existing features. In addition, I solidified my team's software by manually smoke testing all of our bi-weekly releases. 
-          <br/><br/>
+        </p>
+        <p className='tldr-p main-paragraph'>
           During my time at Aetna, I led an initiative for my team of converting our testing software from Ruby to Javascript. In addition to converting the code, I accelerated our nightly regression runs by close to 50% by simplifying tests and removing duplicated scenarios.
         </p>
         <p className='tldr-section'>2nd Job</p>
         <p className='tldr-p main-paragraph'>
           In 2022 I joined Nextworld as an application developer, which allowed me to build applications and feature sets, as well as continue testing. I developed software using Nextworld's "Nextbot" system, bringing dynamic user interfaces to life with large data sets, and did so with the needs of our customers in the manufacturing industry constantly in mind.
-          <br/><br/>
+        </p>
+        <p className='tldr-p main-paragraph'>
           In 2024 I was one of many developers who were unfortunately laid off from Nextworld due to downsizing.
         </p>
         <p className='tldr-section'>Now</p>

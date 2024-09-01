@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-function Sidebar({ darkMode, toggleDarkMode }) {
-  // function handleChange(event) {
-  //   onChange(event.target.value);
-  // };
-
-  // function toggleDarkMode() {
-  //   setdarkMode(previous => previous = !darkMode);
-  //   console.log(darkMode);
-  // }
-  
+function Sidebar({ darkMode, toggleDarkMode }) {  
   return (
     <div className="sidebar">
-      <div className="sidebar-section sidebar-text-section">Home</div>
-      <div className="sidebar-section sidebar-text-section">Resume / CV</div>
-      <div className="sidebar-section sidebar-text-section">TL;DR</div>
-      <div className="sidebar-section sidebar-text-section">AFK</div>
+      <Link to="/" className="sidebar-section sidebar-text-section">Home</Link>
+      <Link to="/resume" className="sidebar-section sidebar-text-section">Resume</Link>
+      <Link to="/tldr" className="sidebar-section sidebar-text-section">At a Glance</Link>
+      <Link to="/personal" className="sidebar-section sidebar-text-section">Outside of work</Link>
       <div className="dark-mode-container">
         <div className="dark-mode-text">Dark Mode {darkMode? 'on' : 'off'}</div>
         <div className="dark-mode-slider" onClick={toggleDarkMode}>

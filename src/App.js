@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Tldr from './Components/Tldr';
 import Home from './Components/Home';
@@ -25,29 +26,32 @@ function App() {
   };
 
   return (
-    <div className="App" data-theme={'dark'}>
-      <header className="App-header">
-        <div className='app-header-container'>
-          <div className='header-hamburger-container' onClick={toggleSidebar}>
-            <div className='header-hamburger-bar hamburger-bar1'></div>
-            <div className='header-hamburger-bar hamburger-bar2'></div>
-            <div className='header-hamburger-bar hamburger-bar3'></div>
+    <Router>
+      <div className="App" data-theme={'dark'}>
+        <header className="App-header">
+          <div className='app-header-container'>
+            <div className='header-hamburger-container' onClick={toggleSidebar}>
+              <div className='header-hamburger-bar hamburger-bar1'></div>
+              <div className='header-hamburger-bar hamburger-bar2'></div>
+              <div className='header-hamburger-bar hamburger-bar3'></div>
+            </div>
+            <div className='app-header-name'>
+              <img src={ABIcon} className='app-AB-icon' />
+              <p className='header-title'>Alex</p>
+            </div>
           </div>
-          <div className='app-header-name'>
-            <img src={ABIcon} className='app-AB-icon' />
-            <p className='header-title'>Alex</p>
-          </div>
+        </header>
+        {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
+        <div className='app-main'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tldr" element={<Tldr />} />
+            <Route path="/personal" element={<Personal />} />
+          </Routes>
         </div>
-      </header>
-      {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
-      {/* <Sidebar /> */}
-      <div className='app-main'>
-        <Home />
-        <Tldr />
-        <Personal />
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -1,9 +1,16 @@
 import profile from '../assets/profile.jpg';
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Tldr.css';
 
 function Tldr() {
-  let d = new Date();
+  const [loadedTime, setLoadedTime] = useState('');
+
+  useEffect(() => {
+    const d = new Date();
+    const hours = d.getHours();
+    const minutes = String(d.getMinutes()).padStart(2, '0');
+    setLoadedTime(`${hours}:${minutes}`);
+  }, []);
 
   return (
     <div className="Tldr Page">
@@ -45,7 +52,7 @@ function Tldr() {
         <p className='tldr-p main-paragraph'>
           If you're interested in chatting, please reach out! I'd love to set up a call or a coffee meeting.
         </p>
-        <div className='tldr-message-read'>Read {d.getHours()}:{d.getMinutes()}</div>
+        <div className='tldr-message-read'>Read {loadedTime}</div>
       </div>
       <div className='learn-more-button'>
         Learn More

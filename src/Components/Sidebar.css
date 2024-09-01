@@ -13,9 +13,14 @@
 }
 
 .sidebar-section {
-  margin: 1em auto;
-  padding: .5em 0;
+  color: var(--light-text);
+  font-weight: 600;
   text-align: left;
+  display: block;
+  width: 100%;
+  padding: .5em 0;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .dark-mode-container {

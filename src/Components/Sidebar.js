@@ -18,7 +18,7 @@ function Sidebar({ darkMode, toggleDarkMode }) {
       <div className="sidebar-section sidebar-text-section">TL;DR</div>
       <div className="sidebar-section sidebar-text-section">AFK</div>
       <div className="dark-mode-container">
-        <div className="dark-mode-text">Dark Mode</div>
+        <div className="dark-mode-text">Dark Mode {darkMode? 'on' : 'off'}</div>
         <div className="dark-mode-slider" onClick={toggleDarkMode}>
           <div className="dark-mode-slider-dot"></div>
           <div className="dark-mode-enabled-dot"></div>

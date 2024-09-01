@@ -13,7 +13,8 @@
   --main-p-weight: 400;
   --main-p-size: 1.5em;
   --svg-filter: invert(90%);
-
+  --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
+  
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 45px;
   --slider-shadow: 0 0 5px black;
@@ -30,6 +31,7 @@
   --shadow-to-the-right: 1px 0 20px -10px #111;
   --light-text: #232323;
   --svg-filter: invert(10%);
+  --blue-blue-background-gradient: linear-gradient(135deg, #0033FE, #147efb);
 
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 5px;

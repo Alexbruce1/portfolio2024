@@ -1,0 +1,119 @@
+.AI {
+  /* background-color: green; */
+  max-width: 1200px;
+  margin: 3em auto;
+}
+
+.ai-text-field {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--big-shadow);
+  background-color: #eee;
+  border: 0;
+  outline: none;
+  border-radius: 3em;
+  padding: 5px 5px 5px 2em;
+  margin: 1em auto;
+  transition-duration: 1s;
+}
+
+.ai-text-field:focus-within {
+  box-shadow: 1em 1em 1.5em -1em #fecb2e,
+              -1em -1em 1.5em -1em #fc3158,
+              1em -1em 1.5em -1em #53d769,
+              -1em 1em 1.5em -1em #5fc9f8;
+  animation: rotate-shadow 8s infinite linear;
+}
+
+.ai-field-input {
+  background-color: transparent;
+  color: #333;
+  margin: auto 0;
+  padding: 0;
+  text-align: left;
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  min-height: 20px;
+  user-select: text;
+  position: relative; /* Required for the pseudo-element */
+}
+
+.ai-field-input:empty::before {
+  content: attr(data-placeholder); /* Use the data-placeholder attribute for placeholder text */
+  color: #aaa;
+  pointer-events: none; /* Ensure clicks pass through to the editable area */
+  user-select: none; /* Prevents selecting placeholder text */
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0; /* Match input padding if necessary */
+  font-size: 1em; /* Match the font size of the input text */
+  line-height: 1.5; /* Adjust line height if needed */
+}
+
+.ai-form-submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ai-form-submit:hover {
+  background-color: #0056b3;
+}
+
+.ai-form-submit {
+  width: 10em;
+  margin: auto 0;
+  height: 2em;
+  font-size: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 1em;
+  background-color: #147efb;
+  color: #eee;
+}
+
+@keyframes rotate-shadow {
+  0% {
+    box-shadow: 
+      1em 1em 1.5em -1em #fecb2e,
+      -1em -1em 1.5em -1em #fc3158,
+      1em -1em 1.5em -1em #53d769,
+      -1em 1em 1.5em -1em #5fc9f8;
+  }
+  25% {
+    box-shadow: 
+      1em -1em 1.5em -1em #fecb2e,
+      1em 1em 1.5em -1em #fc3158,
+      -1em 1em 1.5em -1em #53d769,
+      -1em -1em 1.5em -1em #5fc9f8;
+  }
+  50% {
+    box-shadow: 
+      -1em -1em 1.5em -1em #fecb2e,
+      1em -1em 1.5em -1em #fc3158,
+      -1em 1em 1.5em -1em #53d769,
+      1em 1em 1.5em -1em #5fc9f8;
+  }
+  75% {
+    box-shadow: 
+      -1em 1em 1.5em -1em #fecb2e,
+      -1em -1em 1.5em -1em #fc3158,
+      1em -1em 1.5em -1em #53d769,
+      1em 1em 1.5em -1em #5fc9f8;
+  }
+  100% {
+    box-shadow: 
+      1em 1em 1.5em -1em #fecb2e,
+      -1em -1em 1.5em -1em #fc3158,
+      1em -1em 1.5em -1em #53d769,
+      -1em 1em 1.5em -1em #5fc9f8;
+  }
+}

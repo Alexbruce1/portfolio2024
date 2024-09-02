@@ -1,4 +1,4 @@
-import profile from '../assets/profile.jpg';
+// import profile from '../assets/profile.jpg';
 import React, { useState, useEffect } from 'react';
 import './Tldr.css';
 
@@ -17,7 +17,7 @@ function Tldr() {
       <h1 className='page-header'>
         TL;DR
       </h1>
-      <img className='profile-img' src={profile}/>
+      {/* <img className='profile-img' src={profile}/> */}
       <h2>
         Alex Bruce
       </h2>

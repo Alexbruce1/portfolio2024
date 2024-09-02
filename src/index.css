@@ -7,6 +7,7 @@
   --green-text: #606C38;
   --accent-blue: #0077b6;
   --big-shadow: -.5em 1em 2em #111;
+  --bigger-shadow: -.5em 1em 3em #111;
   --shadow-to-the-right: 10px 0 20px -10px #111;
   --light-text: #ddd;
   --medium-text: #aaa;
@@ -28,6 +29,7 @@
   --green-text: #606C38;
   --accent-blue: #0077b6;
   --big-shadow: -.5em 1em 2em #696969;
+  --bigger-shadow: -.5em 1em 3em #666;
   --shadow-to-the-right: 1px 0 20px -10px #111;
   --light-text: #232323;
   --svg-filter: invert(10%);

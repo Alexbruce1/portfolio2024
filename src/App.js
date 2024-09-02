@@ -18,7 +18,6 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(prevMode => !prevMode);
-    console.log(darkMode);
   };
 
   function toggleSidebar() {

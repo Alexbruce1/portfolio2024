@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import car1 from '../assets/car-images/car1.jpg';
 import car2 from '../assets/car-images/car2.jpg';
 import car3 from '../assets/car-images/car3.jpg';
@@ -9,7 +9,7 @@ import car7 from '../assets/car-images/car7.jpg';
 import car8 from '../assets/car-images/car8.jpg';
 import car9 from '../assets/car-images/car9.jpg';
 import './Home.css';
-import profile from '../assets/profile.jpg';
+import profile from '../assets/me/profile.jpg';
 import icon1 from '../assets/tech-svgs/icon1.svg';
 import icon2 from '../assets/tech-svgs/icon2.svg';
 import icon3 from '../assets/tech-svgs/icon3.svg';
@@ -31,6 +31,12 @@ import icon18 from '../assets/tech-svgs/icon18.svg';
 import icon19 from '../assets/tech-svgs/icon19.svg';
 import icon20 from '../assets/tech-svgs/icon20.svg';
 import icon21 from '../assets/tech-svgs/icon21.svg';
+import me1 from '../assets/me/me1.jpg';
+import me2 from '../assets/me/me2.jpg';
+import me3 from '../assets/me/me3.jpg';
+import me4 from '../assets/me/me4.jpg';
+import me5 from '../assets/me/me5.jpg';
+
 
 const icons = [
   { name: 'SQL', image: icon1 },
@@ -56,15 +62,26 @@ const icons = [
   { name: 'Jest', image: icon21 }
 ];
 
+const profilePics = [profile, me1, me2, me3, me4, me5];
+
 const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
 
 function Home() {
+  let [profilePicIndex, setProfilePicIndex] = useState(0);
+
+  function updateProfilePic() {
+    setProfilePicIndex((previous) => {
+      const nextIndex = (previous + 1) % profilePics.length; // This will loop back to 0 after reaching the last index
+      return nextIndex;
+    });
+  }
+  
   useEffect(() => {
     const preloadImages = () => {
       carImages.forEach((image) => {
         const img = new Image();
         img.src = image;
-        img.onload = () => console.log(`Image loaded: ${img.src}`);
+        // img.onload = () => console.log(`Image loaded: ${img.src}`);
       });
     };
 
@@ -86,7 +103,7 @@ function Home() {
           </p>
         </div>
         <div className='home-image-container'>
-          <img className='profile-img-home' src={profile} alt="Profile" />
+          <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
         </div>
       </div>
       <div className='tech-container'>

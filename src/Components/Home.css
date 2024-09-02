@@ -12,7 +12,7 @@
 .home-headline {
   font-size: 4em;
   text-align: left;
-
+  background-clip: text;
   background: var(--blue-blue-background-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,10 +30,16 @@
 }
 
 .profile-img-home {
+  cursor: pointer;
   border-radius: 1em;
   box-shadow: var(--big-shadow);
   object-fit: contain;
   max-width: 100%;
+  transition-duration: .25s;
+}
+
+.profile-img-home:hover {
+  box-shadow: var(--bigger-shadow);
 }
 
 .tech-container {

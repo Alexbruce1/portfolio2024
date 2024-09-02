@@ -41,7 +41,6 @@ function App() {
             </Link>
           </div>
         </header>
-        <AI />
         {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
         <div className='app-main'>
           <Routes>
@@ -50,6 +49,7 @@ function App() {
             <Route path="/personal" element={<Personal />} />
           </Routes>
         </div>
+        <AI />
         <Footer />
       </div>
     </Router>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Tldr from './Components/Tldr';
 import Home from './Components/Home';
+import AI from './Components/AI';
 import Personal from './Components/Personal';
 import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
@@ -40,6 +41,7 @@ function App() {
             </Link>
           </div>
         </header>
+        <AI />
         {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
         <div className='app-main'>
           <Routes>

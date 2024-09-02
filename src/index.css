@@ -38,17 +38,6 @@
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 5px;
   --slider-shadow: 0 0 5px #666;
-
-  /* hamburger menu active */
-  /* --bar-1-top: 21px;
-  --bar-1-shadow: none;
-  --bar-1-transform: rotate(45deg);
-  --bar-2-top: 15px;
-  --bar-2-shadow: none;
-  --bar-2-transform: rotate(-45deg);
-  --bar-3-top: 9px;
-  --bar-3-shadow: none;
-  --bar-3-transform: rotate(135deg); */
 }
 
 body {

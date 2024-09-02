@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Tldr from './Components/Tldr';
 import Home from './Components/Home';
@@ -18,7 +18,6 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(prevMode => !prevMode);
-    console.log(darkMode);
   };
 
   function toggleSidebar() {
@@ -35,10 +34,10 @@ function App() {
               <div className='header-hamburger-bar hamburger-bar2'></div>
               <div className='header-hamburger-bar hamburger-bar3'></div>
             </div>
-            <div className='app-header-name'>
+            <Link to="/" className='app-header-name'>
               <img src={ABIcon} className='app-AB-icon' />
               <p className='header-title'>Alex</p>
-            </div>
+            </Link>
           </div>
         </header>
         {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}

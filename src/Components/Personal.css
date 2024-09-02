@@ -3,67 +3,37 @@
   font-weight: 400;
   font-size: 1.5em;
 }
-  
-.shadow-container {
-  position: relative;
-  height: 15em;
+
+.photo-masonry-grid {
   display: flex;
-  justify-content: space-between;
-  top: -15em;
-  pointer-events: none;
+  margin-top: 20px;
+  gap: 10px; /* Adds both horizontal and vertical spacing */
 }
 
-.shadow {
-  height: 100%;
-  width: 40%;
-  pointer-events: none;
+.photo-masonry-grid_column {
+  padding-left: 5px; /* Optional: Adds a bit of padding to create gutter */
+  background-clip: padding-box; /* Ensures the padding is not considered as part of the column width */
 }
 
-.shadow-left {
-  background-image: linear-gradient(to right, var(--background-color), transparent);
-}
-
-.shadow-right {
-  background-image: linear-gradient(to left, var(--background-color), transparent);
-}
-
-.photo-slider-title {
-  font-weight: 400;
-  font-size: 1.5em;
-}
-    
-.image-container {
+.photo-grid-item {
+  margin-bottom: 10px; /* This could be removed if using gap for consistency */
   display: flex;
-  overflow-x: scroll;
-  height: 15em;
-}
-
-.image-container:hover > .car-image {
-  animation-play-state: paused;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5em;
+  box-shadow: -2px 4px 10px -5px #111;
+  transition: transform 0.2s ease-in-out;
 }
 
 .car-image {
-  display: flex;
-  cursor: pointer;
-  border-radius: .5em;
-  box-shadow: -2px 4px 10px -5px #111;
-  margin: 1em .5em;
-  animation-name: image;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition-duration: .35s;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .car-image:hover {
+  transform: scale(1.05);
   box-shadow: -2px 4px 10px 0 #111;
-}
-
-@keyframes image {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-152em, 0);
-  }
 }

@@ -26,14 +26,17 @@ const AI = () => {
   return (
     <div className='AI'>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask me anything..."
-          className='ai-text-field'
-        />
-        <button type="submit" className='ai-form-submit'>Send</button>
+        <div className='ai-text-field'>
+          <p
+            className='ai-field-input'
+            contentEditable
+            onInput={(e) => setInput(e.currentTarget.textContent)} 
+            role="textbox"
+            aria-placeholder="I'm ChatGPT. I can assist you with information about Alex as a software engineer."
+            data-placeholder="I'm ChatGPT. I can assist you with information about Alex as a software engineer."
+          ></p>
+          <button type="submit" className='ai-form-submit'>Send</button>
+        </div>
       </form>
       {loading ? <p>Loading...</p> : response && <p>Response: {response}</p>}
     </div>
@@ -41,48 +44,3 @@ const AI = () => {
 };
 
 export default AI;
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// function ChatGPTIntegration() {
-//   const [input, setInput] = useState('');
-//   const [response, setResponse] = useState('');
-
-//   const handleSendMessage = async () => {
-//     try {
-//       // Make a request to your backend server
-//       const result = await axios.post('/api/chat', { message: input });
-//       setResponse(result.data);
-//     } catch (error) {
-//       console.error('Error calling backend API', error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <textarea
-//         value={input}
-//         onChange={(e) => setInput(e.target.value)}
-//         placeholder="Ask me anything..."
-//       />
-//       <button onClick={handleSendMessage}>Send</button>
-//       {response && <div>{response}</div>}
-//     </div>
-//   );
-// }
-
-// export default ChatGPTIntegration;
-
-
-
-// src/AI.js
-// src/AI.js

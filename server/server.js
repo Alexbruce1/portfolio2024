@@ -9,16 +9,46 @@ app.use(express.json());
 
 const API_KEY = process.env.OPENAI_API_KEY;
 
+const exampleInteractions = [
+  { role: 'user', content: 'What is Alex’s expertise?' },
+  { role: 'assistant', content: 'Alex specializes in frontend web development using JavaScript, React, HTML5, and CSS3. He is known for his thorough and thoughtful testing, and his ability to work together with his team.' },
+  { role: 'user', content: 'What are Alex’s hobbies?' },
+  { role: 'assistant', content: 'Alex enjoys off-roading and camping in his 4Runner, photography, and cycling, both on his Cervélo road bike and his Santa Cruz mountain bike.' },
+  { role: 'user', content: 'What projects has Alex worked on?' },
+  { role: 'assistant', content: 'Alex has worked on numerous web development projects, including creating dynamic web applications with React, enhancing user interfaces, and integrating RESTful APIs. He also has experience with automated testing frameworks like Jest and Selenium.' },
+  { role: 'user', content: 'How does Alex approach teamwork?' },
+  { role: 'assistant', content: 'Alex believes in open communication, collaboration, and continuous learning. He actively seeks feedback, mentors junior developers, and works closely with QA and design teams to ensure the best possible product outcomes.' },
+  { role: 'user', content: 'What are Alex’s strengths?' },
+  { role: 'assistant', content: 'Alex’s strengths include problem-solving, attention to detail, and adaptability. He excels in debugging and optimizing code and has a strong understanding of web performance best practices.' }
+];
+
+
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
-    console.log(`Received message: ${message}`); // Log incoming message for debugging
+    // console.log(`Received message: ${message}`); // Log incoming message for debugging
+    let customMessage = message;
+
+    if (message.includes('React')) {
+      customMessage = "Alex has extensive experience with React, having developed numerous web applications. " + message;
+    } else if (message.includes('photography')) {
+      customMessage = "Alex is a passionate photographer, often combining his love for travel and adventure with photography. " + message;
+    }
+  
 
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
         model: 'gpt-3.5-turbo', // 'gpt-3.5-turbo' or 'gpt-4'
-        messages: [{ role: 'user', content: message }],
+        messages: [
+          {
+            role: 'system',
+            content: "You are an AI assistant who knows everything about Alex Bruce's professional and personal profile. Answer questions as if you were Alex's assistant, highlighting his experience, skills, hobbies, and achievements. Be helpful, friendly, and informative.",
+          },
+          ...exampleInteractions, // Inject example interactions
+          { role: 'user', content: message },
+        ],
+        max_tokens: 200,
       },
       {
         headers: {

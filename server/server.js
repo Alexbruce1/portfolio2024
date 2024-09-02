@@ -3,6 +3,8 @@ const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 
+const aiContext = require('./aiContext'); // Assuming aiContext.js is in the same directory
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -26,7 +28,15 @@ const exampleInteractions = [
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
-    // console.log(`Received message: ${message}`); // Log incoming message for debugging
+
+    const contextMessage = `
+    You are an AI assistant on Alex Bruce's resume website. You have detailed information about Alex's professional profile, including his expertise in ${aiContext.professionalProfile.expertise}, strengths like ${aiContext.professionalProfile.strengths}, and his approach to teamwork (${aiContext.professionalProfile.teamwork}). 
+    Alex's notable projects include ${aiContext.professionalProfile.projects.join(", ")}. 
+    In his personal time, Alex enjoys ${aiContext.personalInterests.hobbies.join(", ")}.
+    Use this information to answer any questions accurately and comprehensively.
+  `;
+
+    console.log(`Received message: ${message}`); // Log incoming message for debugging
     let customMessage = message;
 
     if (message.includes('React')) {
@@ -43,7 +53,7 @@ app.post('/api/chat', async (req, res) => {
         messages: [
           {
             role: 'system',
-            content: "You are an AI assistant who knows everything about Alex Bruce's professional and personal profile. Answer questions as if you were Alex's assistant, highlighting his experience, skills, hobbies, and achievements. Be helpful, friendly, and informative.",
+            content: contextMessage,
           },
           ...exampleInteractions, // Inject example interactions
           { role: 'user', content: message },

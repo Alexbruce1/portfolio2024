@@ -42,7 +42,7 @@ function App() {
             </Link>
           </div>
         </header>
-        {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
+        {sidebarActive && <Sidebar darkMode={darkMode} toggleSidebar={toggleSidebar} toggleDarkMode={toggleDarkMode} />}
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home />} />

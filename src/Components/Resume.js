@@ -9,8 +9,6 @@ function Resume() {
       <iframe
         className='resume-iframe'
         src={resume}
-        width="100%"
-        height="600px"
         title="Resume"
       />
     </div>

@@ -1,5 +1,6 @@
-// import profile from '../assets/profile.jpg';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import AI from './AI';
 import './Tldr.css';
 
 function Tldr() {
@@ -17,7 +18,6 @@ function Tldr() {
       <h1 className='page-header'>
         TL;DR
       </h1>
-      {/* <img className='profile-img' src={profile}/> */}
       <h2>
         Alex Bruce
       </h2>
@@ -56,9 +56,10 @@ function Tldr() {
         </p>
         <div className='tldr-message-read'>Read {loadedTime}</div>
       </div>
-      <div className='learn-more-button'>
+      <Link to='/resume' className='learn-more-button'>
         Learn More
-      </div>
+      </Link>
+      {/* <AI /> */}
     </div>
   );
 }

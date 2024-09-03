@@ -4,6 +4,7 @@ import './App.css';
 import Tldr from './Components/Tldr';
 import Home from './Components/Home';
 import AI from './Components/AI';
+import Resume from './Components/Resume';
 import Personal from './Components/Personal';
 import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
@@ -41,15 +42,16 @@ function App() {
             </Link>
           </div>
         </header>
-        {sidebarActive && <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
+        {sidebarActive && <Sidebar darkMode={darkMode} toggleSidebar={toggleSidebar} toggleDarkMode={toggleDarkMode} />}
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tldr" element={<Tldr />} />
             <Route path="/personal" element={<Personal />} />
+            <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
-        <AI />
+        {/* <AI /> */}
         <Footer />
       </div>
     </Router>

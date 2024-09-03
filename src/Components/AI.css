@@ -1,6 +1,6 @@
 .AI {
-  /* background-color: green; */
   max-width: 1200px;
+  width: 100%;
   margin: 3em auto;
 }
 
@@ -39,7 +39,7 @@
   font-size: 1em;
   min-height: 20px;
   user-select: text;
-  position: relative; /* Required for the pseudo-element */
+  position: relative;
 }
 
 .ai-field-input:empty::before {

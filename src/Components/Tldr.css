@@ -50,6 +50,7 @@
   padding: .25em .5em;
   box-shadow: 5px 5px var(--tan-text), -5px -5px var(--tan-text);
   transition: ease-in-out 250ms;
+  text-decoration: none;
 }
 .learn-more-button:hover {
   border-radius: 2px;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Resume.css';
-import resume from '../assets/Alex_Bruce_Resume.pdf'
+import ABResume from '../assets/Alex_Bruce_Resume.pdf'
 
 
 function Resume() {
@@ -8,7 +8,7 @@ function Resume() {
     <div className='Resume'>
       <iframe
         className='resume-iframe'
-        src={resume}
+        src={ABResume}
         title="Resume"
       />
     </div>

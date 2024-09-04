@@ -41,7 +41,7 @@ import me5 from '../assets/me/me5.jpg';
 
 const icons = [
   { name: 'SQL', image: icon1 },
-  { name: 'AWS S3', image: icon2 },
+  { name: 'AWS', image: icon2 },
   { name: 'CSS3', image: icon3 },
   { name: 'Git/GitHub', image: icon4 },
   { name: 'HTML5', image: icon5 },

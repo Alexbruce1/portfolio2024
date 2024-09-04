@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { act } from 'react';
 import App from './App';
 
 beforeAll(() => {
@@ -16,9 +15,7 @@ afterAll(() => {
 
 
 test('renders Alex link', () => {
-  act(() => {
-    render(<App />);
-  });
+  render(<App />);
 
   const linkElements = screen.getAllByText(/Alex/i);
   

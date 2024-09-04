@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Footer.css';
 import LI from '../assets/tech-svgs/li.svg';
 import GH from '../assets/tech-svgs/gh.svg';
@@ -21,24 +21,24 @@ function Footer() {
         <div className='footer-section footer-contact'>
           <h3>Contact</h3>
           <div className='links-container'>
-            <a className='footer-link' target="_blank" href='https://www.linkedin.com/in/alexbbruce/'>
-              <img src={LI} className='li-icon footer-icon' />
+            <a className='footer-link' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/alexbbruce/'>
+              <img alt='Linkedin icon' src={LI} className='li-icon footer-icon' />
               <p className='footer-text'>LinkedIn</p>
             </a>
-            <a className='footer-link' target="_blank" href='https://github.com/Alexbruce1/'>
-              <img src={GH} className='li-icon footer-icon' />
+            <a className='footer-link' target="_blank" rel="noreferrer" href='https://github.com/Alexbruce1/'>
+              <img alt='Github icon' src={GH} className='li-icon footer-icon' />
               <p className='footer-text'>GitHub</p>
             </a>
             <a className='footer-link footer-link-email' href="mailto:ABruce18@Turing.edu">
-              <img src={email} className='li-icon footer-icon bw-icon' />
+              <img alt='email icon' src={email} className='li-icon footer-icon bw-icon' />
               <p className='footer-text'>abruce18@turing.edu</p>
             </a>
             <a className='footer-link footer-link-phone' href="tel:3035643255">
-              <img src={phone} className='li-icon footer-icon bw-icon' />
+              <img alt='phone icon' src={phone} className='li-icon footer-icon bw-icon' />
               <p className='footer-text'>+1(303) 564-3255</p>
             </a>
             <div className='footer-link footer-link-location'>
-              <img src={pin} className='li-icon footer-icon bw-icon' />
+              <img alt='location pin icon' src={pin} className='li-icon footer-icon bw-icon' />
               <p className='footer-text footer-text-location'>Denver, Colorado</p>
             </div>
           </div>

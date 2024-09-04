@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AI from './AI';
+// import AI from './AI';
 import './Tldr.css';
 
 function Tldr() {
@@ -31,7 +31,7 @@ function Tldr() {
       <div className='tldr-text-container'>
         <p className='tldr-section'>Education</p>
         <p className='tldr-p main-paragraph'>
-          I got my start at the <a className='tldr-link' href='https://turing.edu/' target="_blank">Turing School of Software and Design</a>, studying front end engineering. That course focused on creating a hirable developer. The main technical portion was focused around Javascript, React, HTML/CSS, and related disciplines. The less technical portion was based around other aspects of a technical career. This included using version control (we used Git/Github), Agile vs Waterfall methodologies, test-driven development, and teamwork.
+          I got my start at the <a className='tldr-link' href='https://turing.edu/'rel="noreferrer" target="_blank">Turing School of Software and Design</a>, studying front end engineering. That course focused on creating a hirable developer. The main technical portion was focused around Javascript, React, HTML/CSS, and related disciplines. The less technical portion was based around other aspects of a technical career. This included using version control (we used Git/Github), Agile vs Waterfall methodologies, test-driven development, and teamwork.
           </p>
         <p className='tldr-section'>1st Job</p>
         <p className='tldr-p main-paragraph'>

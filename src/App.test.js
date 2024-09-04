@@ -1,8 +1,23 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation((message) => {
+    if (!message.includes('Warning: `ReactDOMTestUtils.act` is deprecated')) {
+      console.error(message);
+    }
+  });
+});
+
+afterAll(() => {
+  console.error.mockRestore();
+});
+
+
+test('renders Alex link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const linkElements = screen.getAllByText(/Alex/i);
+  
+  expect(linkElements.length).toBeGreaterThan(0);
 });

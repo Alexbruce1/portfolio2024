@@ -15,6 +15,7 @@ function App() {
   let [darkMode, setDarkMode] = useState(true);
 
   const sidebarRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
@@ -30,7 +31,12 @@ function App() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target) && 
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target)
+      ) {
         setSidebarActive(false);
       }
     };
@@ -52,7 +58,11 @@ function App() {
         <header className="App-header">
           <div className='app-header-container'>
             <div className='header-hamburger-menu-container'>
-              <div className={sidebarActive ? 'header-hamburger-container-active' : 'header-hamburger-container'} ref={sidebarRef} onClick={toggleSidebar}>
+              <div 
+                className={sidebarActive ? 'header-hamburger-container-active' : 'header-hamburger-container'} 
+                ref={hamburgerRef}
+                onClick={toggleSidebar}
+              >
                 <div className='header-hamburger-bar hamburger-bar1'></div>
                 <div className='header-hamburger-bar hamburger-bar2'></div>
                 <div className='header-hamburger-bar hamburger-bar3'></div>

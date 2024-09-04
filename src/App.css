@@ -49,6 +49,15 @@ h2, h3 {
   margin: auto 0;
 }
 
+.header-hamburger-menu-container {
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.header-hamburger-menu-container:hover .header-hamburger-bar {
+  background-color: #61dafb;
+}
+
 .header-hamburger-container {
   height: 40px;
   width: 45px;
@@ -76,19 +85,19 @@ h2, h3 {
   top: 34px;
 }
 
-.header-hamburger-container:hover > .hamburger-bar1 {
+.header-hamburger-container-active > .hamburger-bar1 {
   top: 20px;
   box-shadow: none;
   transform: rotate(45deg);
 }
 
-.header-hamburger-container:hover > .hamburger-bar2 {
+.header-hamburger-container-active > .hamburger-bar2 {
   top: 17px;
   box-shadow: none;
   transform: rotate(-45deg);
 }
 
-.header-hamburger-container:hover > .hamburger-bar3 {
+.header-hamburger-container-active > .hamburger-bar3 {
   top: 15px;
   box-shadow: none;
   transform: rotate(135deg);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Footer.css';
 import LI from '../assets/tech-svgs/li.svg';
 import GH from '../assets/tech-svgs/gh.svg';

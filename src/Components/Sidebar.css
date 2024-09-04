@@ -1,11 +1,10 @@
 .sidebar {
-  background-color: var(--background-color);
+  background: linear-gradient(0deg, var(--background-color), var(--background-accent-color) 100%);
   position: fixed;
-  /* border-radius: 10px; */
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   box-shadow: var(--big-shadow);
-  /* top: calc(var(--header-height) + 10px); */
-  top: calc(var(--header-height) - 1px);
+  top: calc(var(--header-height) + 10px);
+  /* top: calc(var(--header-height) - 1px); */
   width: 300px;
   z-index: 10;
   padding: 1em;

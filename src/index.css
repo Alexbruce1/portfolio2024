@@ -1,6 +1,7 @@
 :root {
   --background-color: #232323;
   --background-accent-color: #333;
+  --background-accent-color-shifted: #555;
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4DB7F9 1%, #147efb 100%);
   --tan-text: #DDA15E;
@@ -25,6 +26,7 @@
 [data-theme="light"] {
   --background-color: #ddd;
   --background-accent-color: #bbb;
+  --background-accent-color-shifted: #999;
   --tldr-p-background-color: #147efb;
   --tan-text: #DDA15E;
   --green-text: #606C38;

@@ -32,6 +32,8 @@ import icon19 from '../assets/tech-svgs/icon19.svg';
 import icon20 from '../assets/tech-svgs/icon20.svg';
 import icon21 from '../assets/tech-svgs/icon21.svg';
 import icon22 from '../assets/tech-svgs/icon22.svg';
+import icon23 from '../assets/tech-svgs/icon23.svg';
+import icon24 from '../assets/tech-svgs/icon24.svg';
 import me1 from '../assets/me/me1.jpg';
 import me2 from '../assets/me/me2.jpg';
 import me3 from '../assets/me/me3.jpg';
@@ -62,6 +64,8 @@ const icons = [
   { name: 'Redux', image: icon20 },
   { name: 'Jest', image: icon21 },
   { name: 'OpenAI', image: icon22 },
+  { name: 'Postman', image: icon23 },
+  { name: 'Agile', image: icon24 },
 ];
 
 const profilePics = [profile, me1, me2, me3, me4, me5];

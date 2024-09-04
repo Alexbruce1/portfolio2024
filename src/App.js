@@ -9,6 +9,7 @@ import Personal from './Components/Personal';
 import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
 import ABIcon from '../src/assets/ABIcon.png'
+import { debug } from 'openai/core.mjs';
 
 function App() {
   let [sidebarActive, setSidebarActive] = useState(false);
@@ -51,10 +52,21 @@ function App() {
       <div className="App" data-theme={'dark'}>
         <header className="App-header">
           <div className='app-header-container'>
-            <div className='header-hamburger-container' onClick={toggleSidebar}>
-              <div className='header-hamburger-bar hamburger-bar1'></div>
-              <div className='header-hamburger-bar hamburger-bar2'></div>
-              <div className='header-hamburger-bar hamburger-bar3'></div>
+            <div className='header-hamburger-menu-container'>
+              <div className='header-hamburger-container' ref={sidebarRef} onClick={toggleSidebar}>
+                <div className='header-hamburger-bar hamburger-bar1'></div>
+                <div className='header-hamburger-bar hamburger-bar2'></div>
+                <div className='header-hamburger-bar hamburger-bar3'></div>
+              </div>
+              {sidebarActive && (
+                <div ref={sidebarRef}>
+                  <Sidebar
+                    darkMode={darkMode}
+                    toggleSidebar={toggleSidebar}
+                    toggleDarkMode={toggleDarkMode}
+                  />
+                </div>
+              )}
             </div>
             <Link to="/" className='app-header-name'>
               <img src={ABIcon} className='app-AB-icon' alt="AB Icon" />
@@ -62,15 +74,6 @@ function App() {
             </Link>
           </div>
         </header>
-        {sidebarActive && (
-          <div ref={sidebarRef}>
-            <Sidebar
-              darkMode={darkMode}
-              toggleSidebar={toggleSidebar}
-              toggleDarkMode={toggleDarkMode}
-            />
-          </div>
-        )}
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -15,6 +15,7 @@
   --main-p-size: 1.5em;
   --svg-filter: invert(90%);
   --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
+  --header-height: 80px;
   
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 45px;

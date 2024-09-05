@@ -9,3 +9,28 @@
 .resume-iframe:hover {
   box-shadow: var(--bigger-shadow);
 }
+
+.resume-download-link {
+  background: var(--background-accent-color);
+  padding: 1em;
+  margin: 4em auto 0;
+  max-width: 15em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: var(--big-shadow);
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+.resume-download-link a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--light-text);
+} 
+
+.resume-download-link:hover {
+  box-shadow: var(--bigger-shadow);
+}
+.resume-download-link:hover a {
+  color: var(--accent-blue);
+}

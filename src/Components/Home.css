@@ -13,6 +13,7 @@
 
 .home-headline {
   font-size: 4em;
+  font-weight: 600;
   text-align: left;
   background-clip: text;
   background: var(--blue-blue-background-gradient);
@@ -76,17 +77,19 @@
 }
 
 .home-team-headline {
-  text-align: end;
-  font-weight: 600;
-  width: 50%;
-  margin-left: 50%;
+  text-align: center;
 }
 
-.home-team-paragraph {
+.home-team-paragraph ul {
   text-align: left;
 }
 
-
+.team-li-big {
+  background: var(--blue-blue-background-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
 
 /* Technologies I've Used section */
 
@@ -121,6 +124,55 @@
 .icon-name {
   color: var(--light-text);
   letter-spacing: 2px;
+}
+
+/* Recommendations */
+
+.recommendations-container {
+  margin: 2em auto;
+  padding: 2em auto;
+  width: 100%;
+}
+
+.recommendations {
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2em;
+}
+
+.recommendation-box {
+  background: var(--background-accent-color);
+  color: var(--light-text);
+  padding: 2em;
+  padding-bottom: 1em;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.rec-top-row {
+  display: flex;
+}
+
+.rec-name {
+  font-weight: 600;
+  padding-right: 2em;
+}
+
+.rec-relationship {
+  color: var(--medium-text);
+}
+
+.rec-comment {
+  border-radius: 5px;
+  box-shadow: inset 0 0 15px -8px #000;
+  margin-top: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 5em;
+  font-weight: 500;
 }
 
 /* Animations */
@@ -220,11 +272,54 @@
     display: none;
   }
 
+  .home-team-container {
+    background: var(--tldr-p-background-color-gradient);
+    padding: 4em 1em;
+  }
+
+  .home-divider {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+  }
+
+  .home-team-headline {
+    background: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: var(--background-accent-color);
+  }
+
+  .main-paragraph {
+    text-align: left;
+  }
+
+  .team-li-big {
+    background: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: var(--background-accent-color);
+  }
+
+  .home-team-paragraph {
+    color: var(--background-accent-color-shifted);
+  }
+
   .logo-group {
     padding: 1em;
     max-width: 14%;
     margin: 1em;
   }
+
+  .tech-container {
+    margin: -4em 0 0;
+  }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+  .recommendations {
+    grid-template-columns: auto;
+    gap: 1em;
+    padding: 1em;
+  }  
+}

@@ -68,6 +68,33 @@ const icons = [
   { name: 'Agile', image: icon24 },
 ];
 
+const recommendations = [
+  {
+    name: 'Alexander E',
+    role: 'Senior Software Engineer',
+    relationship: 'Fellow student',
+    comment: 'I have worked closely with Alex on several JavaScript-based projects and can confidently recommend him as someone who deeply understands programming concepts. Alex has a talent for summarizing difficult programming concepts and explaining them clearly and concisely, which he demonstrated to me be helping me understand several ES6 concepts in a mere 10 minutes during the 2nd module of our software education program. Alex is the sort of programmer who takes the necessary time to fully understand concepts before implementing him, which ensures that he proceeds through his work in a calm, methodical fashion. Furthermore, he is truly talented in CSS and design, which he demonstrated during our joint MovieTracker project. With his excellent grasp of JavaScript and CSS design, I am confident that Alex will be a prime asset to any company he chooses to work for.',
+  },
+  {
+    name: 'Benjamin H',
+    role: 'Senior Consultant',
+    relationship: 'Fellow student',
+    comment: 'Alex was not only a skilled programmer but a skilled problem solver and excellent pair programming partner',
+  },
+  {
+    name: 'Justin S',
+    role: 'Army Veteran - Cannabis Cultivation',
+    relationship: 'Fellow student',
+    comment: 'Alex and I collaborated together on a project. He was a strong communicator and his articulation when working through problems made working with him very pleasant, and productive.',
+  },
+  {
+    name: 'Aaron W',
+    role: 'Software Engineer',
+    relationship: 'Fellow student',
+    comment: 'Alex is a driven and talented software developer.',
+  },
+]
+
 const profilePics = [profile, me1, me2, me3, me4, me5];
 
 const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
@@ -87,7 +114,6 @@ function Home() {
       carImages.forEach((image) => {
         const img = new Image();
         img.src = image;
-        // img.onload = () => console.log(`Image loaded: ${img.src}`);
       });
     };
 
@@ -120,22 +146,21 @@ function Home() {
           Collaboration is at the heart of any great project. I thrive in an environment where:
           <ul>
             <li>
-              Open communication is a priority. I appreciate a culture where asking questions and sharing ideas is encouraged, leading to better problem-solving and innovation.
+              <span className='team-li-big'>Open communication is a priority.</span> I appreciate a culture where asking questions and sharing ideas is encouraged, leading to better problem-solving and innovation.
             </li>
             <li>
-              Continuous learning is valued. I believe in always growing, both personally and as a team, and I enjoy being in a place where learning together is part of the process.
+              <span className='team-li-big'>Continuous learning is valued.</span> I believe in always growing, both personally and as a team, and I enjoy being in a place where learning together is part of the process.
             </li>
             <li>
-              Team camaraderie is important. I enjoy team-building activities or even just informal get-togethers, as they build trust and help us work better together.
+              <span className='team-li-big'>Team camaraderie is important.</span> I enjoy team-building activities or even just informal get-togethers, as they build trust and help us work better together.
             </li>
             <li>
-              Shared goals keep me motivated. I’m at my best when I’m contributing to a project where everyone is aligned and working toward something meaningful.
+              <span className='team-li-big'>Shared goals keep me motivated.</span> I’m at my best when I’m contributing to a project where everyone is aligned and working toward something meaningful.
             </li>
             <li>
-              Mentorship is something I’m passionate about. I’ve been fortunate enough to mentor others in the past, and it’s incredibly rewarding to help my teammates grow and succeed.
+              <span className='team-li-big'>Mentorship is something I’m passionate about.</span> I’ve been fortunate enough to mentor others in the past, and it’s incredibly rewarding to help my teammates grow and succeed.
             </li>
           </ul>
-
         </div>
       </div>
       <div className='tech-container'>
@@ -145,6 +170,23 @@ function Home() {
             <div key={index} className='logo-group'>
               <img src={icon.image} loading="lazy" className='tech-icon' alt={icon.name} />
               <p className='icon-name'>{icon.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='recommendations-container'>
+        <div className='home-headline recommendations-headline'>
+          What others have said
+        </div>
+        <div className='recommendations'>
+          {recommendations.map((rec) => (
+            <div className='recommendation-box'>
+              <div className='rec-top-row'>
+                <div className='rec-name'>{rec.name}</div>
+                <div className='rec-role'>{rec.role}</div>
+              </div>
+              <div className='rec-relationship'>{rec.relationship}</div>
+              <div className='rec-comment'>{rec.comment}</div>
             </div>
           ))}
         </div>

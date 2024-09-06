@@ -17,6 +17,7 @@
   --svg-filter: invert(90%);
   --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
   --header-height: 80px;
+  --bw-icon-filter: invert(90%);
   
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 45px;
@@ -37,6 +38,7 @@
   --light-text: #232323;
   --svg-filter: invert(10%);
   --blue-blue-background-gradient: linear-gradient(135deg, #0033FE, #147efb);
+  --bw-icon-filter: invert(10%);
 
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 5px;

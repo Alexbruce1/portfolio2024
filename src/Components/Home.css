@@ -1,3 +1,5 @@
+/* Main home section */
+
 .home-main-container {
   display: flex;
   justify-content: space-between;
@@ -38,14 +40,59 @@
   transition-duration: .25s;
 }
 
+.image-tooltip {
+  background-color: var(--background-accent-color);
+  opacity: 75%;
+  position: relative;
+  bottom: 3em;
+  padding: .5em 1em;
+  box-sizing: border-box;
+  border-radius: 2em;
+  font-size: small;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.profile-img-home:hover ~ .image-tooltip {
+  visibility: visible;
+}
+
 .profile-img-home:hover {
   box-shadow: var(--bigger-shadow);
 }
 
+/* Team section */
+
+.home-team-container {
+  margin: 2em 0;
+}
+
+.home-divider {
+  background-color: var(--background-accent-color-shifted);
+  border-radius: 50%;
+  height: 2px;
+  width: 80%;
+  margin: 1em auto;
+}
+
+.home-team-headline {
+  text-align: end;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 50%;
+}
+
+.home-team-paragraph {
+  text-align: left;
+}
+
+
+
+/* Technologies I've Used section */
+
 .tech-container {
   border-radius: 1em;
   background: linear-gradient(200deg, var(--background-accent-color), var(--background-accent-color-shifted));
-  /* box-shadow: var(--big-shadow); */
   box-shadow: 8em 8em 5em -10em #fecb2e,
               -8em -8em 5em -10em #fc3158,
               8em -8em 5em -10em #53d769,
@@ -75,6 +122,8 @@
   color: var(--light-text);
   letter-spacing: 2px;
 }
+
+/* Animations */
 
 @keyframes pulsate-shadow {
   0% {
@@ -135,6 +184,8 @@
     background-position: 0% 50%;
   }
 }
+
+/* Breakpoints */
 
 @media (max-width: 1240px) {
   .home-headline {

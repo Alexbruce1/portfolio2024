@@ -110,6 +110,32 @@ function Home() {
         </div>
         <div className='home-image-container'>
           <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
+          <span class="image-tooltip">See More</span>
+        </div>
+      </div>
+      <div className='home-team-container'>
+        <div className='home-divider'></div>
+        <div className='home-team-headline home-headline'>What I'm looking for in a team</div>
+        <div className='home-p home-team-paragraph'>
+          Collaboration is at the heart of any great project. I thrive in an environment where:
+          <ul>
+            <li>
+              Open communication is a priority. I appreciate a culture where asking questions and sharing ideas is encouraged, leading to better problem-solving and innovation.
+            </li>
+            <li>
+              Continuous learning is valued. I believe in always growing, both personally and as a team, and I enjoy being in a place where learning together is part of the process.
+            </li>
+            <li>
+              Team camaraderie is important. I enjoy team-building activities or even just informal get-togethers, as they build trust and help us work better together.
+            </li>
+            <li>
+              Shared goals keep me motivated. I’m at my best when I’m contributing to a project where everyone is aligned and working toward something meaningful.
+            </li>
+            <li>
+              Mentorship is something I’m passionate about. I’ve been fortunate enough to mentor others in the past, and it’s incredibly rewarding to help my teammates grow and succeed.
+            </li>
+          </ul>
+
         </div>
       </div>
       <div className='tech-container'>

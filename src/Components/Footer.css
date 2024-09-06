@@ -76,7 +76,7 @@
 }
 
 .bw-icon {
-  filter: invert(90%);
+  filter: var(--bw-icon-filter);
 }
 
 .footer-text {

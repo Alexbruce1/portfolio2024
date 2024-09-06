@@ -20,6 +20,7 @@ h2, h3 {
   width: 100%;
   box-sizing: border-box;
   height: var(--header-height);
+  z-index: 15;
 }
 
 .app-header-container {
@@ -112,11 +113,6 @@ h2, h3 {
   flex-direction: column;
 }
 
-.page-header {
-  color: var(--green-text);
-  font-weight: 500;
-}
-
 .main-paragraph {
   text-align: justify;
 }
@@ -144,7 +140,7 @@ h2, h3 {
 }
 
 @media (max-width: 1000px) {
-  .App {
-    /* background-color: green; */
+  .app-main {
+    padding: 0;
   }
 }

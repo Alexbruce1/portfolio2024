@@ -124,22 +124,71 @@ h2, h3 {
   padding: 1em;
 }
 
+/* 1240px ------------------------------------------------------ */
 @media (max-width: 1240px) {
-  .App {
-    margin: auto;
-  }
-
   .App-header {
     padding: 1em;
   }
-  
+
+  .App {
+    margin: auto;
+  }
+ 
   .app-main {
     max-width: 1000px;
     padding: 2em;
   }
 }
 
+/* 1000px ------------------------------------------------------ */
 @media (max-width: 1000px) {
+  .App-header {
+    padding: 8px 1em;
+    height: unset;
+  }
+  
+  .app-header-container {
+    height: 40px;
+    align-items: center;
+  }
+
+  .header-hamburger-container {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+  }
+
+  .header-hamburger-container-active > .hamburger-bar1 {
+    top: 2px;
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+  
+  .header-hamburger-container-active > .hamburger-bar2 {
+    top: 0px;
+    box-shadow: none;
+    transform: rotate(-45deg);
+  }
+  
+  .header-hamburger-container-active > .hamburger-bar3 {
+    top: -2px;
+    box-shadow: none;
+    transform: rotate(135deg);
+  }
+
+  .header-hamburger-bar {
+    width: 40px;
+  }
+
+  .app-AB-icon {
+    height: 30px;
+  }
+
+  .header-title {
+    font-size: 1.5em;
+  }
+ 
+
   .app-main {
     padding: 0;
   }

@@ -17,6 +17,7 @@
   --svg-filter: invert(90%);
   --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
   --header-height: 80px;
+  --small-header-height: 50px;
   --bw-icon-filter: invert(90%);
   
   --dm-slider-dot-top: 5px;

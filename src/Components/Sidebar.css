@@ -81,3 +81,9 @@
   margin: auto 0;
   color: var(--accent-blue);
 }
+
+@media (max-width: 1000px) {
+  .sidebar {
+    top: 3em;
+  }
+}

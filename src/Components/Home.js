@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import car1 from '../assets/car-images/car1.jpg';
 import car2 from '../assets/car-images/car2.jpg';
 import car3 from '../assets/car-images/car3.jpg';
@@ -71,25 +72,25 @@ const icons = [
 const recommendations = [
   {
     name: 'Alexander E',
-    role: 'Senior Software Engineer',
+    // role: 'Senior Software Engineer',
     relationship: 'Fellow student',
     comment: 'I have worked closely with Alex on several JavaScript-based projects and can confidently recommend him as someone who deeply understands programming concepts. Alex has a talent for summarizing difficult programming concepts and explaining them clearly and concisely, which he demonstrated to me be helping me understand several ES6 concepts in a mere 10 minutes during the 2nd module of our software education program. Alex is the sort of programmer who takes the necessary time to fully understand concepts before implementing him, which ensures that he proceeds through his work in a calm, methodical fashion. Furthermore, he is truly talented in CSS and design, which he demonstrated during our joint MovieTracker project. With his excellent grasp of JavaScript and CSS design, I am confident that Alex will be a prime asset to any company he chooses to work for.',
   },
   {
     name: 'Benjamin H',
-    role: 'Senior Consultant',
+    // role: 'Senior Consultant',
     relationship: 'Fellow student',
     comment: 'Alex was not only a skilled programmer but a skilled problem solver and excellent pair programming partner',
   },
   {
     name: 'Justin S',
-    role: 'Army Veteran - Cannabis Cultivation',
+    // role: 'Army Veteran - Cannabis Cultivation',
     relationship: 'Fellow student',
     comment: 'Alex and I collaborated together on a project. He was a strong communicator and his articulation when working through problems made working with him very pleasant, and productive.',
   },
   {
     name: 'Aaron W',
-    role: 'Software Engineer',
+    // role: 'Software Engineer',
     relationship: 'Fellow student',
     comment: 'Alex is a driven and talented software developer.',
   },
@@ -101,6 +102,7 @@ const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
 
 function Home() {
   let [profilePicIndex, setProfilePicIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   function updateProfilePic() {
     setProfilePicIndex((previous) => {
@@ -123,6 +125,17 @@ function Home() {
     return () => clearTimeout(timeoutId); // Cleanup if component unmounts
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1001);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <div className="Home Page">
       <div className='home-main-container'>
@@ -134,14 +147,22 @@ function Home() {
             Hey, thanks for checking out my site! I'm Alex! I'm a software developer who loves tackling challenges and making software better. I've led projects that streamline development and improve reliability, all while bridging the gap between development and QA. I'm big on collaboration, Agile, and creating features that really drive growth.
           </p>
         </div>
+        {isMobile ? <div className='home-links-container'>
+          <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+          <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+        </div> : null }
         <div className='home-image-container'>
           <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
           <span class="image-tooltip">See More</span>
         </div>
       </div>
+      {isMobile ? null : <div className='home-links-container'>
+        <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+        <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+      </div> }
       <div className='home-team-container'>
         <div className='home-divider'></div>
-        <div className='home-team-headline home-headline'>What I'm looking for in a team</div>
+        <div className='home-team-headline home-headline'>What find important in a team</div>
         <div className='home-p home-team-paragraph'>
           Collaboration is at the heart of any great project. I thrive in an environment where:
           <ul>
@@ -163,30 +184,35 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className='tech-container'>
-        <h2>Technologies I've used</h2>
-        <div className='tech-logo-container'>
-          {icons.map((icon, index) => (
-            <div key={index} className='logo-group'>
-              <img src={icon.image} loading="lazy" className='tech-icon' alt={icon.name} />
-              <p className='icon-name'>{icon.name}</p>
-            </div>
-          ))}
+      <div className='tech-container-background'>
+        <div className='tech-container'>
+          <h2>Technologies I've used</h2>
+          <div className='tech-logo-container'>
+            {icons.map((icon, index) => (
+              <div key={index} className='logo-group'>
+                <img src={icon.image} loading="lazy" className='tech-icon' alt={icon.name} />
+                <p className='icon-name'>{icon.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className='recommendations-container'>
         <div className='home-headline recommendations-headline'>
           What others have said
         </div>
+        <div className='recommendations-sub-headline'>
+          Recommendations from LinkedIn
+        </div>
         <div className='recommendations'>
           {recommendations.map((rec) => (
             <div className='recommendation-box'>
               <div className='rec-top-row'>
                 <div className='rec-name'>{rec.name}</div>
-                <div className='rec-role'>{rec.role}</div>
+                {/* <div className='rec-role'>{rec.role}</div> */}
+                <div className='rec-relationship'>{rec.relationship}</div>
               </div>
-              <div className='rec-relationship'>{rec.relationship}</div>
-              <div className='rec-comment'>{rec.comment}</div>
+              <div className='rec-comment'>"{rec.comment}"</div>
             </div>
           ))}
         </div>

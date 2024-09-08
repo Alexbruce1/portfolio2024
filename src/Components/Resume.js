@@ -12,7 +12,11 @@ function Resume() {
         title="Resume"
       />
       <div className='resume-download-link'>
-        <a href={pdfUrl} download="Alex_Bruce_Resume.pdf">
+        <a 
+          href={pdfUrl} 
+          target="_blank" 
+          download="Alex_Bruce_Resume.pdf"
+          rel="noreferrer">
           Download Resume
         </a>
       </div>

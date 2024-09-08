@@ -5,12 +5,24 @@
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4DB7F9 1%, #147efb 100%);
   --blue-blue-background-gradient: linear-gradient(180deg, #5fc9f8, #147efb);
-  --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #232323 100%);
+  --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #232323 60%);
   --high-contrast-text-over-blue-bg: #232323;
   --tan-text: #DDA15E;
   --green-text: #606C38;
   --accent-blue: #0077b6;
   --big-shadow: -.5em 1em 2em #111;
+  /* --small-shadow: -3px 6px 12px #111; */
+  --colorful-shadow:  8em 8em 5em -10em #fecb2e,
+                      -8em -8em 5em -10em #fc3158,
+                      8em -8em 5em -10em #53d769,
+                      -8em 8em 5em -10em #5fc9f8;
+  /* --colorful-shadow-0-animate */
+  --colorful-shadow-small:  16px 16px 10px -15px #147efb,
+                            -16px -16px 10px -15px #4DB7F9,
+                            16px -16px 10px -15px #147efb,
+                            -16px 16px 10px -15px #4DB7F9;
+  --colorful-shadow-animation: pulsate-shadow 5s infinite alternate;
+  --colorful-shadow-small-animation: pulsate-shadow-small 4s infinite alternate;
   --bigger-shadow: -.5em 1em 3em #111;
   --shadow-to-the-right: 10px 0 20px -10px #111;
   --light-text: #ddd;
@@ -39,6 +51,7 @@
   --green-text: #606C38;
   --accent-blue: #0077b6;
   --big-shadow: -.5em 1em 2em #696969;
+  /* --small-shadow: -3px 6px 12px #696969; */
   --bigger-shadow: -.5em 1em 3em #666;
   --shadow-to-the-right: 1px 0 20px -10px #000;
   --light-text: #232323;

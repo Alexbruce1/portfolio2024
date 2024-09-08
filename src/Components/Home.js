@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import car1 from '../assets/car-images/car1.jpg';
 import car2 from '../assets/car-images/car2.jpg';
 import car3 from '../assets/car-images/car3.jpg';
@@ -101,6 +102,7 @@ const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
 
 function Home() {
   let [profilePicIndex, setProfilePicIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   function updateProfilePic() {
     setProfilePicIndex((previous) => {
@@ -123,6 +125,17 @@ function Home() {
     return () => clearTimeout(timeoutId); // Cleanup if component unmounts
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1001);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <div className="Home Page">
       <div className='home-main-container'>
@@ -134,14 +147,22 @@ function Home() {
             Hey, thanks for checking out my site! I'm Alex! I'm a software developer who loves tackling challenges and making software better. I've led projects that streamline development and improve reliability, all while bridging the gap between development and QA. I'm big on collaboration, Agile, and creating features that really drive growth.
           </p>
         </div>
+        {isMobile ? <div className='home-links-container'>
+          <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+          <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+        </div> : null }
         <div className='home-image-container'>
           <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
           <span class="image-tooltip">See More</span>
         </div>
       </div>
+      {isMobile ? null : <div className='home-links-container'>
+        <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+        <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+      </div> }
       <div className='home-team-container'>
         <div className='home-divider'></div>
-        <div className='home-team-headline home-headline'>What I'm looking for in a team</div>
+        <div className='home-team-headline home-headline'>What find important in a team</div>
         <div className='home-p home-team-paragraph'>
           Collaboration is at the heart of any great project. I thrive in an environment where:
           <ul>

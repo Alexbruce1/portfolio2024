@@ -328,6 +328,7 @@
 
   .home-team-container {
     margin-top: -5em;
+    margin-bottom: 0;
   }
 
   .home-team-headline {
@@ -340,8 +341,13 @@
     text-align: left;
   }
 
+  .tech-container-background {
+    margin-top: -1px;
+    background: var(--blue-to-main-bg-background);
+  }
+  
   .tech-container {
-    margin: -4em 0 0;
+    margin: -4em 1em 0;
   }
 
   .team-li-big {

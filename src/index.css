@@ -4,7 +4,8 @@
   --background-accent-color-shifted: #555;
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4DB7F9 1%, #147efb 100%);
-  --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
+  --blue-blue-background-gradient: linear-gradient(180deg, #5fc9f8, #147efb);
+  --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #232323 100%);
   --high-contrast-text-over-blue-bg: #232323;
   --tan-text: #DDA15E;
   --green-text: #606C38;
@@ -31,7 +32,8 @@
   --background-accent-color: #bbb;
   --background-accent-color-shifted: #999;
   --tldr-p-background-color: #147efb;
-  --blue-blue-background-gradient: linear-gradient(135deg, #0033FE, #147efb);
+  --blue-blue-background-gradient: linear-gradient(180deg, #0033FE, #147efb);
+  --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #ddd 100%);
   --high-contrast-text-over-blue-bg: #eee;
   --tan-text: #DDA15E;
   --green-text: #606C38;

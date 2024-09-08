@@ -4,6 +4,8 @@
   --background-accent-color-shifted: #555;
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4DB7F9 1%, #147efb 100%);
+  --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
+  --high-contrast-text-over-blue-bg: #232323;
   --tan-text: #DDA15E;
   --green-text: #606C38;
   --accent-blue: #0077b6;
@@ -15,7 +17,6 @@
   --main-p-weight: 400;
   --main-p-size: 1.5em;
   --svg-filter: invert(90%);
-  --blue-blue-background-gradient: linear-gradient(135deg, #5fc9f8, #147efb);
   --header-height: 80px;
   --small-header-height: 50px;
   --bw-icon-filter: invert(90%);
@@ -30,15 +31,16 @@
   --background-accent-color: #bbb;
   --background-accent-color-shifted: #999;
   --tldr-p-background-color: #147efb;
+  --blue-blue-background-gradient: linear-gradient(135deg, #0033FE, #147efb);
+  --high-contrast-text-over-blue-bg: #eee;
   --tan-text: #DDA15E;
   --green-text: #606C38;
   --accent-blue: #0077b6;
   --big-shadow: -.5em 1em 2em #696969;
   --bigger-shadow: -.5em 1em 3em #666;
-  --shadow-to-the-right: 1px 0 20px -10px #111;
+  --shadow-to-the-right: 1px 0 20px -10px #000;
   --light-text: #232323;
   --svg-filter: invert(10%);
-  --blue-blue-background-gradient: linear-gradient(135deg, #0033FE, #147efb);
   --bw-icon-filter: invert(10%);
 
   --dm-slider-dot-top: 5px;

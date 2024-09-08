@@ -178,15 +178,18 @@ function Home() {
         <div className='home-headline recommendations-headline'>
           What others have said
         </div>
+        <div className='recommendations-sub-headline'>
+          Recommendations from LinkedIn
+        </div>
         <div className='recommendations'>
           {recommendations.map((rec) => (
             <div className='recommendation-box'>
               <div className='rec-top-row'>
                 <div className='rec-name'>{rec.name}</div>
-                <div className='rec-role'>{rec.role}</div>
+                {/* <div className='rec-role'>{rec.role}</div> */}
+                <div className='rec-relationship'>{rec.relationship}</div>
               </div>
-              <div className='rec-relationship'>{rec.relationship}</div>
-              <div className='rec-comment'>{rec.comment}</div>
+              <div className='rec-comment'>"{rec.comment}"</div>
             </div>
           ))}
         </div>

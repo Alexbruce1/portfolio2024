@@ -212,6 +212,10 @@
   font-weight: 500;
 }
 
+.red {
+  color: red;
+}
+
 /* Animations */
 
 @keyframes pulsate-shadow {
@@ -352,7 +356,7 @@
   }
 
   .home-team-container {
-    margin-top: -5em;
+    margin-top: -8em;
     margin-bottom: 0;
   }
 
@@ -360,6 +364,14 @@
     background: unset;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
+  }
+
+  .home-p {
+    margin: 0;
+  }
+
+  .home-team-paragraph ul {
+    margin: 0;
   }
 
   .main-paragraph {
@@ -400,6 +412,17 @@
 
 /* 800px ------------------------------------------------------ */
 @media (max-width: 800px) {
+  .home-links-container {
+    /* background-color: #147efb; */
+    flex-direction: column;
+    height: 10em;
+  }
+
+  .home-link {
+    width: 80%;
+    box-shadow: 0 0 5px white;
+  }
+
   .recommendations {
     grid-template-columns: auto;
     gap: 1em;

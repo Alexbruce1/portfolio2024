@@ -102,4 +102,17 @@
   .Tldr {
     padding: 1em;
   }
+
+  .tldr-header {
+    font-size: 2em;
+  }
+
+  .tldr-sub-header {
+    font-size: 1.25em;
+  }
+
+  .tldr-p {
+    background: var(--tldr-p-background-color-gradient-ios);
+    background-attachment: fixed;
+  }
 }

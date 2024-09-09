@@ -3,6 +3,7 @@
 .home-main-container {
   display: flex;
   justify-content: space-between;
+  margin: var(--container-margin);
 }
 
 .home-text {
@@ -12,14 +13,13 @@
 }
 
 .home-headline {
-  font-size: 4em;
-  font-weight: 600;
-  text-align: left;
-  background-clip: text;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  text-align: var(--text-align);
+  background-clip: var(--background-clip);
   background: var(--blue-blue-background-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 3s infinite;
+  -webkit-background-clip: var(--webkit-background-clip);
+  -webkit-text-fill-color: var(--webkit-text-fill-color);
 }
 
 .home-p {
@@ -66,7 +66,7 @@
 
 .home-links-container {
   width: 100%;
-  margin: 1em auto;
+  margin: var(--container-margin);
   display: flex;
   justify-content: space-around;
 }
@@ -87,7 +87,7 @@
 /* Team section */
 
 .home-team-container {
-  margin:  0;
+  margin: var(--container-margin);
 }
 
 .home-divider {
@@ -102,8 +102,16 @@
   text-align: center;
 }
 
+.home-team-sub-headline {
+  margin: .5em 0 1.5em;
+}
+
 .home-team-paragraph ul {
   text-align: left;
+}
+
+.home-team-paragraph li {
+  margin: 1em 0;
 }
 
 .team-li-big {
@@ -121,6 +129,7 @@
   box-shadow: var(--colorful-shadow);
   animation: var(--colorful-shadow-animation);
   padding: 2em 0;
+  margin: var(--container-margin);
 }
 
 .tech-logo-container {
@@ -148,22 +157,26 @@
 /* Recommendations */
 
 .recommendations-container {
-  margin: 2em auto;
+  margin: var(--container-margin);
   padding: 2em auto;
   width: 100%;
 }
 
-.recommendations {
-  margin: 1em auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2em;
+.recommendations-headline {
+  text-align: center;
 }
 
 .recommendations-sub-headline {
   font-size: 25px;
   color: var(--light-text);
-  text-align: left;
+  text-align: center;
+}
+
+.recommendations {
+  margin: var(--container-margin);
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2em;
 }
 
 .recommendation-box {

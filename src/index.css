@@ -3,7 +3,8 @@
   --background-accent-color: #333;
   --background-accent-color-shifted: #555;
   --tldr-p-background-color: #147efb;
-  --tldr-p-background-color-gradient: linear-gradient(180deg, #4DB7F9 1%, #147efb 100%);
+  /* --tldr-p-background-color-gradient: linear-gradient(180deg, #5fc9f8 1%, #147efb 75%); */
+  --tldr-p-background-color-gradient: linear-gradient(180deg, #4ca1c6 1%, #1069c8 75%);
   --blue-blue-background-gradient: linear-gradient(180deg, #5fc9f8, #147efb);
   --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #232323 60%);
   --high-contrast-text-over-blue-bg: #232323;
@@ -33,6 +34,17 @@
   --header-height: 80px;
   --small-header-height: 50px;
   --bw-icon-filter: invert(90%);
+  --container-margin:  3em 0;
+
+  /* header text styles */
+  --font-size: 4em;
+  --font-weight: 600;
+  --text-align: left;
+  --background-clip: text;
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+  /*  */
+
   
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 45px;

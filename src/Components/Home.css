@@ -212,6 +212,10 @@
   font-weight: 500;
 }
 
+.red {
+  color: red;
+}
+
 /* Animations */
 
 @keyframes pulsate-shadow {
@@ -408,6 +412,17 @@
 
 /* 800px ------------------------------------------------------ */
 @media (max-width: 800px) {
+  .home-links-container {
+    /* background-color: #147efb; */
+    flex-direction: column;
+    height: 10em;
+  }
+
+  .home-link {
+    width: 80%;
+    box-shadow: 0 0 5px white;
+  }
+
   .recommendations {
     grid-template-columns: auto;
     gap: 1em;

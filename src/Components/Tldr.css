@@ -93,6 +93,13 @@
 }
 
 @media (max-width: 1000px) {
+  .Tldr {
+    padding: 2em;
+  }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+  .Tldr {
+    padding: 1em;
+  }
+}

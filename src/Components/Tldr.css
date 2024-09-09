@@ -1,6 +1,30 @@
-.profile-img {
-  width: 7em;
-  border-radius: 50%;
+.Tldr {
+  margin: var(--container-margin);
+}
+
+.tldr-header {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  text-align: var(--text-align);
+  background-clip: var(--background-clip);
+  background: var(--blue-blue-background-gradient);
+  -webkit-background-clip: var(--webkit-background-clip);
+  -webkit-text-fill-color: var(--webkit-text-fill-color);
+}
+
+.tldr-sub-header {
+  font-size: var(--main-p-size);
+  text-align: justify;
+  padding: 1em 0;
+}
+
+.specialties {
+  text-align: center;
+  padding: 0;
+}
+
+.tldr-text-container {
+  margin: var(--container-margin);
 }
 
 .tldr-section {

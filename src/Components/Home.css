@@ -13,14 +13,13 @@
 }
 
 .home-headline {
-  font-size: 4em;
-  font-weight: 600;
-  text-align: left;
-  background-clip: text;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  text-align: var(--text-align);
+  background-clip: var(--background-clip);
   background: var(--blue-blue-background-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 3s infinite;
+  -webkit-background-clip: var(--webkit-background-clip);
+  -webkit-text-fill-color: var(--webkit-text-fill-color);
 }
 
 .home-p {

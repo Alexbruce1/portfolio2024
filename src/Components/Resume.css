@@ -1,3 +1,7 @@
+.Resume {
+  margin: var(--container-margin);
+}
+
 .resume-iframe {
   border: none;
   border-radius: 1em;

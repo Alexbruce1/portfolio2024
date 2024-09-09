@@ -15,19 +15,15 @@ function Tldr() {
 
   return (
     <div className="Tldr Page">
-      <h1 className='page-header'>
-        TL;DR
-      </h1>
-      <h2>
-        Alex Bruce
-      </h2>
-      <h3>
+      <div className='tldr-header'>
+        Welcome to the TL;DR version of my career journey so far!
+      </div>
+      <div className='tldr-sub-header'>
+        I understand you're busy. This page offers a concise overview of my background as a software developer, including key highlights of my education, experience, and projects. If you’re interested, feel free to explore more on the site or reach out!
+      </div>
+      <div className='tldr-sub-header specialties'>
         Software Developer | React Specialist | Quality Engineer
-      </h3>
-      <h3>
-        Denver, Colorado
-      </h3>
-      <br/><br/>
+      </div>
       <div className='tldr-text-container'>
         <p className='tldr-section'>Education</p>
         <p className='tldr-p main-paragraph'>
@@ -49,10 +45,23 @@ function Tldr() {
         </p>
         <p className='tldr-section'>Now</p>
         <p className='tldr-p main-paragraph'>
-          Since leaving Nextworld, I've focused on strengthening the skills I already have, as well as taking the opportunity to learn new technical skills that I've been curious about for years. I've completed online courses through Codecademy to retain my skills with JavaScript, React, and CSS. I've also honed new skills by taking courses on generative AI, Java, SQL, and even earned an AWS S3 certificate through Coursera!
+          Since leaving Nextworld, I've focused on strengthening the skills I already have, as well as taking the opportunity to learn new technical skills that I've been curious about for years. 
+          <ul>
+            <li>
+              I've completed online courses through Codecademy to retain my skills with JavaScript, React, and CSS.
+            </li>
+            <li>
+              I've also honed new skills by taking courses on generative AI, Java, SQL, and even earned an AWS S3 certificate through Coursera!
+            </li>
+            <li>
+              I'm taking time, daily, to complete short technical JavaScript challenges via edabit.com.
+            </li>
+          </ul>
         </p>
         <p className='tldr-p main-paragraph'>
-          If you're interested in chatting, please reach out! I'd love to set up a call or a coffee meeting.
+          I’m also working on this portfolio/resume app as a personal project—both for the enjoyment of creating it and to give you a glimpse into who I am as a developer!
+          <br></br>
+          If you're interested in chatting, please reach out! I'd love to set up a call or a coffee meeting. ☕️
         </p>
         <div className='tldr-message-read'>Read {loadedTime}</div>
       </div>

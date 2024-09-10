@@ -8,6 +8,7 @@ import Resume from './Components/Resume';
 // import Personal from './Components/Personal';
 import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
+import Contact from './Components/Contact';
 import ABIcon from '../src/assets/ABIcon.png'
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
             <Route path="/tldr" element={<Tldr />} />
             {/* <Route path="/personal" element={<Personal />} /> */}
             <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         {/* <AI /> */}

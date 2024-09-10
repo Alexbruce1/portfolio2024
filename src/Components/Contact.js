@@ -33,7 +33,7 @@ function Contact() {
       });
 
       if (response.ok) {
-        setStatus("Form submitted successfully!");
+        setStatus("Your message was sent! I'll be in touch as soon as possible.");
         setFormData({
           email: "",
           message: "",
@@ -91,15 +91,15 @@ function Contact() {
               ></textarea>
             </div>
             <button className="form-submit" type="submit">Send</button>
-            <div className="form-status">Your message was sent</div>
-            {/* <div className="form-status">{status}</div> */}
+            {/* <div className="form-status">Your message was sent</div> */}
+            <div className="form-status">{status}</div>
           </form>
         </div>
       </div>
-      <div className="contact-links-container">
+      <div className="cont act-links-container">
         <div className="contact-header">You’re welcome to explore my links below!</div>
-        <div className="contact-form-border">
-          <div className="contact-form">
+        {/* <div className="contact-form-border"> */}
+          <div className="contact-form contact-link-container">
             
 
 
@@ -122,7 +122,7 @@ function Contact() {
 
 
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

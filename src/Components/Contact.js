@@ -111,10 +111,10 @@ function Contact() {
               <img alt='Github icon' src={GH} className='li-icon contact-icon' />
               <p className='contact-text'>GitHub</p>
             </a>
-            <a className='contact-link contact-link-phone' href="tel:3035643255">
+            {/* <a className='contact-link contact-link-phone' href="tel:3035643255">
               <img alt='phone icon' src={phone} className='li-icon contact-icon bw-icon' />
               <p className='contact-text'>+1(303) 564-3255</p>
-            </a>
+            </a> */}
 
 
 

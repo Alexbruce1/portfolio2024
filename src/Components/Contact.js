@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import './Contact.css';
 import LI from '../assets/tech-svgs/li.svg';
 import GH from '../assets/tech-svgs/gh.svg';
-import phone from '../assets/tech-svgs/phone.svg';
-
 
 function Contact() {
   const [formData, setFormData] = useState({

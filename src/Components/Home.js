@@ -72,25 +72,21 @@ const icons = [
 const recommendations = [
   {
     name: 'Alexander E',
-    // role: 'Senior Software Engineer',
     relationship: 'Fellow student',
     comment: 'I have worked closely with Alex on several JavaScript-based projects and can confidently recommend him as someone who deeply understands programming concepts. Alex has a talent for summarizing difficult programming concepts and explaining them clearly and concisely, which he demonstrated to me be helping me understand several ES6 concepts in a mere 10 minutes during the 2nd module of our software education program. Alex is the sort of programmer who takes the necessary time to fully understand concepts before implementing him, which ensures that he proceeds through his work in a calm, methodical fashion. Furthermore, he is truly talented in CSS and design, which he demonstrated during our joint MovieTracker project. With his excellent grasp of JavaScript and CSS design, I am confident that Alex will be a prime asset to any company he chooses to work for.',
   },
   {
     name: 'Benjamin H',
-    // role: 'Senior Consultant',
     relationship: 'Fellow student',
     comment: 'Alex was not only a skilled programmer but a skilled problem solver and excellent pair programming partner',
   },
   {
     name: 'Justin S',
-    // role: 'Army Veteran - Cannabis Cultivation',
     relationship: 'Fellow student',
     comment: 'Alex and I collaborated together on a project. He was a strong communicator and his articulation when working through problems made working with him very pleasant, and productive.',
   },
   {
     name: 'Aaron W',
-    // role: 'Software Engineer',
     relationship: 'Fellow student',
     comment: 'Alex is a driven and talented software developer.',
   },

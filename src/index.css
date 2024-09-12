@@ -23,7 +23,6 @@
                             16px -16px 10px -15px #147efb,
                             -16px 16px 10px -15px #4DB7F9;
   --colorful-shadow-animation: pulsate-shadow 5s infinite alternate;
-  --colorful-shadow-small-animation: pulsate-shadow-small 4s infinite alternate;
   --bigger-shadow: -.5em 1em 3em #111;
   --shadow-to-the-right: 10px 0 20px -10px #111;
   --light-text: #ddd;

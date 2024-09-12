@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import LI from '../assets/tech-svgs/li.svg';
 import GH from '../assets/tech-svgs/gh.svg';
@@ -8,6 +9,19 @@ import pin from '../assets/tech-svgs/pin.svg';
 
 
 function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 840);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1001);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return(
     <div className='Footer'>
       <div className='footer-items-container'>
@@ -43,6 +57,12 @@ function Footer() {
             </div>
           </div>
         </div>
+        { isMobile ? <div className='nav-link-container'>
+          <Link className='nav-link' to="/">Home</Link>
+          <Link className='nav-link' to="/resume">Resume</Link>
+          <Link className='nav-link' to="/tldr">TL;DR</Link>
+          <Link className='nav-link' to="/contact">Contact</Link>
+        </div> : null}
       </div>
     </div>
   )

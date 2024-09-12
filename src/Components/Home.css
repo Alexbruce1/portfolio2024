@@ -308,11 +308,11 @@
     margin: 0;
   }
   
-    .home-link {
-      width: 40%;
-      padding: 10px 0;
-      font-size: 1.5em;
-    }
+  .home-link {
+    width: 40%;
+    padding: 10px 0;
+    font-size: 1.5em;
+  }
   
   .home-image-container {
     position: relative;
@@ -405,16 +405,13 @@
 @media (max-width: 800px) {
   .home-links-container {
     flex-direction: column;
-    height: 10em;
+    height: unset;
   }
 
   .home-link {
     width: 80%;
-    box-shadow: 0 0 5px white;
-  }
-
-  .home-link-contact {
     padding: 1em;
+    margin: 1em auto 0;
   }
 
   .recommendations {

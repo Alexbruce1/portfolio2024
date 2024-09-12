@@ -183,8 +183,8 @@ function Home() {
             </li>
           </ul>
         </div>
+          <Link className='home-link home-link-contact' to={'/contact'}>Let's get in touch!</Link>
       </div>
-      <Link className='home-link home-link-contact' to={'/contact'}>Let's get in touch!</Link>
       <div className='tech-container-background'>
         <div className='tech-container'>
           <h2>Technologies I've used</h2>

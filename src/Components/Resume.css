@@ -21,9 +21,8 @@
   max-width: 15em;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: var(--big-shadow);
   cursor: pointer;
-  transition-duration: .3s;
+  transition-duration: .2s;
 }
 
 .resume-download-link a {
@@ -32,9 +31,6 @@
   color: var(--light-text);
 } 
 
-.resume-download-link:hover {
-  box-shadow: var(--bigger-shadow);
-}
 .resume-download-link:hover a {
   color: var(--accent-blue);
 }

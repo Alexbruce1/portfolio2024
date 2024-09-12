@@ -57,8 +57,11 @@ function Footer() {
             </div>
           </div>
         </div>
-        { isMobile ? <div>
-          <Link to="/contact">Contact</Link>
+        { isMobile ? <div className='nav-link-container'>
+          <Link className='nav-link' to="/">Home</Link>
+          <Link className='nav-link' to="/resume">Resume</Link>
+          <Link className='nav-link' to="/tldr">TL;DR</Link>
+          <Link className='nav-link' to="/contact">Contact</Link>
         </div> : null}
       </div>
     </div>

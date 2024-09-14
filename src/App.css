@@ -11,8 +11,8 @@ h2, h3 {
 
 .App-header {
   color: #696969;
-  backdrop-filter: blur(10px) saturate(50%);
-  box-shadow: 0 0 20px -6px #111;
+  backdrop-filter: brightness(90%) blur(10px) saturate(50%);
+  /* box-shadow: 0 0 20px -6px #111; */
   position: sticky;
   top: 0;
   align-items: center;

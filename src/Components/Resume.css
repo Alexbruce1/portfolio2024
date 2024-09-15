@@ -34,3 +34,14 @@
 .resume-download-link:hover a {
   color: var(--accent-blue);
 }
+
+/* 800px ------------------------------------------------------ */
+@media (max-width: 800px) {
+  .Resume {
+    padding: 1em;
+  }
+  
+  .resume-iframe {
+    max-height: 75vh;
+  }
+}

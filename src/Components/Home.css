@@ -189,8 +189,7 @@
 }
 
 .recommendation-box {
-  background: var(--blue-blue-background-gradient);
-  color: var(--high-contrast-text-over-blue-bg);
+  backdrop-filter: brightness(120%) blur(10px) saturate(50%);
   padding: 2em;
   padding-bottom: 1em;
   box-sizing: border-box;
@@ -219,10 +218,6 @@
   overflow: scroll;
   height: 5em;
   font-weight: 500;
-}
-
-.red {
-  color: red;
 }
 
 /* Animations */

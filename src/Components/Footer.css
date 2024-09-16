@@ -1,7 +1,5 @@
 .Footer {
-  /* color: #aaa; */
   backdrop-filter: brightness(90%) blur(10px) saturate(50%);
-  /* box-shadow: 0 0 20px -6px #111; */
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
@@ -34,6 +32,10 @@
 .footer-contact {
   width: 16em;
   margin-left: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 .footer-about-p {

@@ -33,7 +33,10 @@ function Footer() {
           </p>
         </div>
         <div className='footer-section footer-contact'>
+        <Link className='nav-link' to="/contact">
           <h3>Contact</h3>
+        </Link>
+
           <div className='links-container'>
             <a className='footer-link' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/alexbbruce/'>
               <img alt='Linkedin icon' src={LI} className='li-icon footer-icon' />

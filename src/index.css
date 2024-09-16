@@ -37,6 +37,7 @@
 
   /* header text styles */
   --font-size: 4em;
+  --font-size-small: 25px;
   --font-weight: 600;
   --text-align: left;
   --background-clip: text;

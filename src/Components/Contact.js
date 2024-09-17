@@ -89,18 +89,13 @@ function Contact() {
               ></textarea>
             </div>
             <button className="form-submit" type="submit">Send</button>
-            {/* <div className="form-status">Your message was sent</div> */}
             <div className="form-status">{status}</div>
           </form>
         </div>
       </div>
       <div className="cont act-links-container">
         <div className="contact-header">You’re welcome to explore my links below!</div>
-        {/* <div className="contact-form-border"> */}
           <div className="contact-form contact-link-container">
-            
-
-
           <a className='contact-link' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/alexbbruce/'>
               <img alt='Linkedin icon' src={LI} className='li-icon contact-icon' />
               <p className='contact-text'>LinkedIn</p>
@@ -109,18 +104,7 @@ function Contact() {
               <img alt='Github icon' src={GH} className='li-icon contact-icon' />
               <p className='contact-text'>GitHub</p>
             </a>
-            {/* <a className='contact-link contact-link-phone' href="tel:3035643255">
-              <img alt='phone icon' src={phone} className='li-icon contact-icon bw-icon' />
-              <p className='contact-text'>+1(303) 564-3255</p>
-            </a> */}
-
-
-
-
-
-
           </div>
-        {/* </div> */}
       </div>
     </div>
   );

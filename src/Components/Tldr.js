@@ -54,7 +54,7 @@ function Tldr() {
               I've also honed new skills by taking courses on generative AI, Java, SQL, and even earned an AWS S3 certificate through Coursera!
             </li>
             <li>
-              I'm taking time, daily, to complete technical JavaScript challenges via edabit.com.
+              I'm taking time, daily, to complete technical JavaScript challenges via edabit.com and CodeWars.com.
             </li>
           </ul>
         </p>

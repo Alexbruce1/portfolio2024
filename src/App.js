@@ -9,17 +9,34 @@ import Resume from './Components/Resume';
 import Sidebar from './Components/Sidebar';
 import Footer from './Components/Footer';
 import Contact from './Components/Contact';
-import ABIcon from '../src/assets/ABIcon.png'
+import ABIcon from '../src/assets/ABIcon.png';
 
 function App() {
   let [sidebarActive, setSidebarActive] = useState(false);
-  let [darkMode, setDarkMode] = useState(true);
+  let [darkMode, setDarkMode] = useState(null);
 
   const sidebarRef = useRef(null);
   const hamburgerRef = useRef(null);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode !== null) {
+      setDarkMode(JSON.parse(savedDarkMode));
+    } else {
+      setDarkMode(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (darkMode !== null) {
+      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    if (darkMode !== null) {
+      document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    }
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -53,9 +70,13 @@ function App() {
     };
   }, [sidebarActive]);
 
+  if (darkMode === null) {
+    return null;
+  }
+
   return (
     <Router>
-      <div className="App" data-theme={'dark'}>
+      <div className="App" data-theme={darkMode ? 'dark' : 'light'}>
         <header className="App-header">
           <div className='app-header-container'>
             <div className='header-hamburger-menu-container'>

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import './Resume.css';
 
 function Resume() {
   const pdfUrl = 'https://abresume.s3.amazonaws.com/Alex_Bruce_Resume.pdf';
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return(
     <div className='Resume'>

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // import AI from './AI';
 import './Tldr.css';
 
 function Tldr() {
   const [loadedTime, setLoadedTime] = useState('');
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const d = new Date();

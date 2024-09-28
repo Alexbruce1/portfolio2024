@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import './Contact.css';
 import LI from '../assets/tech-svgs/li.svg';
 import GH from '../assets/tech-svgs/gh.svg';
 
 function Contact() {
-  const [formData, setFormData] = useState({
+  const { pathname } = useLocation();
+  let [formData, setFormData] = useState({
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+  let [status, setStatus] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

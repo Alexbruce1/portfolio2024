@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import car1 from '../assets/car-images/car1.jpg';
 import car2 from '../assets/car-images/car2.jpg';
 import car3 from '../assets/car-images/car3.jpg';
@@ -97,8 +97,14 @@ const profilePics = [profile, me1, me2, me3, me4, me5];
 const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
 
 function Home() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   let [profilePicIndex, setProfilePicIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  let [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   function updateProfilePic() {
     setProfilePicIndex((previous) => {

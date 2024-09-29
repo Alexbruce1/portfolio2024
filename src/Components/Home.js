@@ -121,10 +121,9 @@ function Home() {
       });
     };
 
-    // Start preloading images after the Home component has fully rendered
-    const timeoutId = setTimeout(preloadImages, 1000); // Delay to ensure Home page loads first
+    const timeoutId = setTimeout(preloadImages, 1000);
 
-    return () => clearTimeout(timeoutId); // Cleanup if component unmounts
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {

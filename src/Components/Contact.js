@@ -6,11 +6,11 @@ import GH from '../assets/tech-svgs/gh.svg';
 
 function Contact() {
   const { pathname } = useLocation();
-  let [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     email: "",
     message: "",
   });
-  let [status, setStatus] = useState("");
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);

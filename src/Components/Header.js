@@ -8,6 +8,11 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
   return(
     <header className="App-header">
       <div className='app-header-container'>
+        {/* {} */}
+
+
+
+
         <div className='header-hamburger-menu-container'>
           <div 
             className={sidebarActive ? 'header-hamburger-container-active' : 'header-hamburger-container'} 
@@ -28,6 +33,8 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
             </div>
           )}
         </div>
+
+        
         <Link to="/" className='app-header-name'>
           <img src={ABIcon} className='app-AB-icon' alt="AB Icon" />
           <p className='header-title'>Alex</p>

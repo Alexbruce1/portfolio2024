@@ -9,105 +9,6 @@ h2, h3 {
   background-color: var(--background-color);
 }
 
-.App-header {
-  color: #696969;
-  backdrop-filter: brightness(90%) blur(10px) saturate(50%);
-  /* box-shadow: 0 0 20px -6px #111; */
-  position: sticky;
-  top: 0;
-  align-items: center;
-  padding: 1em 0;
-  width: 100%;
-  box-sizing: border-box;
-  height: var(--header-height);
-  z-index: 15;
-}
-
-.app-header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.app-header-name {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.app-AB-icon {
-  height: 48px;
-  filter: var(--svg-filter);
-  margin: 0;
-}
-
-.header-title {
-  font-size: 2em;
-  color: var(--light-text);
-  margin: auto 0;
-}
-
-.header-hamburger-menu-container {
-  transition-duration: .3s;
-  cursor: pointer;
-}
-
-.header-hamburger-menu-container:hover .header-hamburger-bar {
-  background-color: var(--tldr-p-background-color);
-}
-
-.header-hamburger-container {
-  height: 40px;
-  width: 45px;
-  cursor: pointer;
-  position: relative;
-  z-index: 20;
-}
-
-.header-hamburger-bar {
-  background-color: var(--light-text);
-  height: 2px;
-  border-radius: 3px;
-  width: 45px;
-  margin: 0;
-  position: relative;
-  z-index: 12;
-  transition-duration: .5s;
-}
-
-.hamburger-bar2 {
-  top: 17px;
-}
-
-.hamburger-bar3 {
-  top: 34px;
-}
-
-.header-hamburger-container-active > .hamburger-bar1 {
-  top: 20px;
-  box-shadow: none;
-  transform: rotate(45deg);
-}
-
-.header-hamburger-container-active > .hamburger-bar2 {
-  top: 17px;
-  box-shadow: none;
-  transform: rotate(-45deg);
-}
-
-.header-hamburger-container-active > .hamburger-bar3 {
-  top: 15px;
-  box-shadow: none;
-  transform: rotate(135deg);
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .Page {
   display: flex;
   flex-direction: column;
@@ -126,10 +27,6 @@ h2, h3 {
 
 /* 1240px ------------------------------------------------------ */
 @media (max-width: 1240px) {
-  .App-header {
-    padding: 1em;
-  }
-
   .App {
     margin: auto;
   }
@@ -142,53 +39,6 @@ h2, h3 {
 
 /* 1000px ------------------------------------------------------ */
 @media (max-width: 1000px) {
-  .App-header {
-    padding: 8px 1em;
-    height: unset;
-  }
-  
-  .app-header-container {
-    height: 40px;
-    align-items: center;
-  }
-
-  .header-hamburger-container {
-    height: 40px;
-    width: 40px;
-    margin: 0;
-  }
-
-  .header-hamburger-container-active > .hamburger-bar1 {
-    top: 2px;
-    box-shadow: none;
-    transform: rotate(45deg);
-  }
-  
-  .header-hamburger-container-active > .hamburger-bar2 {
-    top: 0px;
-    box-shadow: none;
-    transform: rotate(-45deg);
-  }
-  
-  .header-hamburger-container-active > .hamburger-bar3 {
-    top: -2px;
-    box-shadow: none;
-    transform: rotate(135deg);
-  }
-
-  .header-hamburger-bar {
-    width: 40px;
-  }
-
-  .app-AB-icon {
-    height: 30px;
-  }
-
-  .header-title {
-    font-size: 1.5em;
-  }
- 
-
   .app-main {
     padding: 0;
   }

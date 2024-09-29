@@ -13,9 +13,20 @@ import Contact from './Components/Contact';
 function App() {
   let [sidebarActive, setSidebarActive] = useState(false);
   let [darkMode, setDarkMode] = useState(null);
+  let [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const sidebarRef = useRef(null);
   const hamburgerRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1001);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const savedDarkMode = localStorage.getItem('darkMode');
@@ -85,7 +96,7 @@ function App() {
           toggleDarkMode={toggleDarkMode} />
         <div className='app-main'>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home isMobile={isMobile} />} />
             <Route path="/tldr" element={<Tldr />} />
             {/* <Route path="/personal" element={<Personal />} /> */}
             <Route path="/resume" element={<Resume />} />

@@ -96,7 +96,7 @@ const profilePics = [profile, me1, me2, me3, me4, me5];
 
 const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
 
-function Home() {
+function Home({ isMobile }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -104,7 +104,6 @@ function Home() {
   }, [pathname]);
   
   let [profilePicIndex, setProfilePicIndex] = useState(0);
-  let [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   function updateProfilePic() {
     setProfilePicIndex((previous) => {
@@ -125,17 +124,6 @@ function Home() {
 
     return () => clearTimeout(timeoutId);
   }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1001);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
 
   return (
     <div className="Home Page">

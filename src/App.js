@@ -93,7 +93,8 @@ function App() {
           toggleSidebar={toggleSidebar}
           sidebarRef={sidebarRef}
           darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode} />
+          toggleDarkMode={toggleDarkMode} 
+          isMobile={isMobile}/>
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home isMobile={isMobile} />} />

@@ -26,7 +26,7 @@
   --bigger-shadow: -.5em 1em 3em #111;
   --shadow-to-the-right: 10px 0 20px -10px #111;
   --light-text: #ddd;
-  --medium-text: #aaa;
+  --medium-text: #bbb;
   --main-p-weight: 400;
   --main-p-size: 1.5em;
   --svg-filter: invert(90%);
@@ -34,7 +34,7 @@
   --small-header-height: 50px;
   --bw-icon-filter: invert(90%);
   --container-margin:  3em 0;
-
+  
   /* header text styles */
   --font-size: 4em;
   --font-size-small: 25px;
@@ -44,7 +44,7 @@
   --webkit-background-clip: text;
   --webkit-text-fill-color: transparent;
   /*  */
-
+  
   
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 45px;
@@ -67,9 +67,10 @@
   --bigger-shadow: -.5em 1em 3em #666;
   --shadow-to-the-right: 1px 0 20px -10px #000;
   --light-text: #232323;
+  --medium-text: #555;
   --svg-filter: invert(10%);
   --bw-icon-filter: invert(10%);
-
+  
   --dm-slider-dot-top: 5px;
   --dm-slider-dot-left: 5px;
   --slider-shadow: 0 0 5px #666;

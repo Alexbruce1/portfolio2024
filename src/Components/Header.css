@@ -42,7 +42,9 @@
 
 .dark-mode-text-fullsize {
   margin: auto 10px;
-  color: var(--accent-blue);
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--dark-mode-text);
 }
 
 .app-header-name {

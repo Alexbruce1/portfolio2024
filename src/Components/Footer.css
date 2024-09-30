@@ -22,7 +22,7 @@
 }
 
 .footer-about-headline {
-  color: var(--green-text);
+  color: var(--dark-mode-text);
   text-align: center;
   font-size: 20px;
   font-weight: 700;

@@ -53,7 +53,7 @@
   font-weight: 600;
   padding: 1em;
   outline: none;
-  border: 5px solid var(--background-accent-color);
+  border: 5px solid var(--background-accent-color-shifted);
   border-radius: 10px;
   transition-duration: .3s;
   width: 100%;
@@ -62,7 +62,7 @@
 }
 
 .contact-field:focus {
-  border: 5px solid var(--background-accent-color-shifted);
+  border: 5px solid var(--light-text);
 }
 
 .contact-message-input {

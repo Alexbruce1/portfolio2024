@@ -15,6 +15,13 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
             <Link to="/tldr" onClick={toggleSidebar} className="header-link">At a Glance</Link>
             <Link to="/contact" onClick={toggleSidebar} className="header-link">Get in Touch</Link>
             {/* <Link to="/personal" onClick={toggleSidebar} className="header-link">Outside of work</Link> */}
+            <div className="header-link dark-mode-container-fullsize">
+              <div className="dark-mode-text-fullsize">Dark Mode</div>
+              <div className="dark-mode-slider" onClick={toggleDarkMode}>
+                <div className="dark-mode-slider-dot"></div>
+                <div className="dark-mode-enabled-dot"></div>
+              </div>
+            </div>
           </div>
         ) || (
         <div className='header-hamburger-menu-container'>

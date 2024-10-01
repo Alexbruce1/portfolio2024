@@ -19,27 +19,27 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
               <Link 
                 to="/" 
                 onClick={toggleSidebar} 
-                className={location.pathname == "/" ? "header-link header-link-active" : "header-link"}
+                className={location.pathname === "/" ? "header-link header-link-active" : "header-link"}
                 >Home</Link>
               <Link 
                 to="/resume" 
                 onClick={toggleSidebar} 
-                className={location.pathname == "/resume" ? "header-link header-link-active" : "header-link"}
+                className={location.pathname === "/resume" ? "header-link header-link-active" : "header-link"}
                 >Resume</Link>
               <Link 
                 to="/tldr" 
                 onClick={toggleSidebar} 
-                className={location.pathname == "/tldr" ? "header-link header-link-active" : "header-link"}
+                className={location.pathname === "/tldr" ? "header-link header-link-active" : "header-link"}
                 >At a Glance</Link>
               <Link 
                 to="/contact" 
                 onClick={toggleSidebar} 
-                className={location.pathname == "/contact" ? "header-link header-link-active" : "header-link"}
+                className={location.pathname === "/contact" ? "header-link header-link-active" : "header-link"}
                 >Get in Touch</Link>
               {/* <Link 
                 to="/personal" 
                 onClick={toggleSidebar} 
-                className={location.pathname == "/" ? "header-link header-link-active" : "header-link"}
+                className={location.pathname === "/" ? "header-link header-link-active" : "header-link"}
                 >Outside of work</Link> */}
             </div>
             <div className="header-link dark-mode-container-fullsize">

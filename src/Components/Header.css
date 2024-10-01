@@ -1,27 +1,45 @@
 
 .App-header {
   color: #696969;
-  backdrop-filter: brightness(90%) blur(10px) saturate(50%);
+  /* backdrop-filter: brightness(90%) blur(10px) saturate(50%); */
+  background-color: var(--header-background-color);
+  /* background-color: green; */
   position: sticky;
-  top: 0;
+  top: 15px;
+  border-radius: 15px;
+  margin: auto;
+  /* top: 0; */
   align-items: center;
-  padding: 1em 0;
-  width: 100%;
+  padding: 1em;
+  /* width: 100%; */
+  width: 90%;
+  min-width: 1220px;
   box-sizing: border-box;
   z-index: 15;
 }
 
 .app-header-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* padding: 0 10%; */
+}
+
+.app-header-name-fullsize,
+.dark-mode-container-fullsize {
+  width: 220px;
+  /* background-color: blueviolet; */
+  display: flex;
+  text-decoration: none;
+  font-size: 10px;
 }
 
 .header-nav-container {
   display: inline-flex;
   width: 100%;
+  max-width: 1200px;
   justify-content: space-between;
+  /* background-color: green; */
 }
 
 .header-link {
@@ -32,12 +50,12 @@
   transition-duration: .2s;
 }
 
-.header-link:hover {
-  color: var(--medium-text);
+.header-link-active {
+  font-weight: 600;
 }
 
-.dark-mode-container-fullsize {
-  display: flex;
+.header-link:hover {
+  color: var(--medium-text);
 }
 
 .dark-mode-text-fullsize {
@@ -121,21 +139,52 @@
   transform: rotate(135deg);
 }
 
+/* 2000px  ----------------------------------------------------------------------- */
+@media (max-width: 2000px) {
+  .App-header {
+    width: unset;
+    margin: 10px;
+  }
+  
+  .app-header-container {
+    justify-content: space-between;
+  }
+
+  .header-nav-container {
+    width: 50%;
+  }
+
+  .dark-mode-container-fullsize {
+    justify-content: end;
+  }
+}
+
+
+/* 1240px  ----------------------------------------------------------------------- */
 @media (max-width: 1240px) {
   .App-header {
+    min-width: unset;
+    box-sizing: border-box;
     padding: 1em;
   }
+
+  .app-header-container {
+    max-width: 1200px;
+  }  
 }
 
 @media (max-width: 1000px) {
   .App-header {
     padding: 8px 1em;
     height: unset;
+    border-radius: 15px;
   }
   
   .app-header-container {
     height: 40px;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
   }
 
   .header-hamburger-container {

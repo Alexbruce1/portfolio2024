@@ -1,4 +1,5 @@
 :root {
+  --header-background-color: #151515;
   --background-color: #232323;
   --background-accent-color: #333;
   --background-accent-color-shifted: #555;
@@ -48,6 +49,7 @@
 }
 
 [data-theme="light"] {
+  --header-background-color: #eee;
   --background-color: #ddd;
   --background-accent-color: #bbb;
   --background-accent-color-shifted: #999;

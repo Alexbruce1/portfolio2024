@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import ABIcon from '../../src/assets/ABIcon.png';
 import Sidebar from "./Sidebar";
 
 function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMode, toggleDarkMode, isMobile }) {
+  const location = useLocation();
+
   return(
     <header className="App-header">
         {(!isMobile && (
@@ -14,11 +16,31 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
               {/* <p className='header-title'>Alex</p> */}
             </Link>
             <div className="header-nav-container">
-              <Link to="/" onClick={toggleSidebar} className="header-link">Home</Link>
-              <Link to="/resume" onClick={toggleSidebar} className="header-link">Resume</Link>
-              <Link to="/tldr" onClick={toggleSidebar} className="header-link">At a Glance</Link>
-              <Link to="/contact" onClick={toggleSidebar} className="header-link">Get in Touch</Link>
-              {/* <Link to="/personal" onClick={toggleSidebar} className="header-link">Outside of work</Link> */}
+              <Link 
+                to="/" 
+                onClick={toggleSidebar} 
+                className={location.pathname == "/" ? "header-link header-link-active" : "header-link"}
+                >Home</Link>
+              <Link 
+                to="/resume" 
+                onClick={toggleSidebar} 
+                className={location.pathname == "/resume" ? "header-link header-link-active" : "header-link"}
+                >Resume</Link>
+              <Link 
+                to="/tldr" 
+                onClick={toggleSidebar} 
+                className={location.pathname == "/tldr" ? "header-link header-link-active" : "header-link"}
+                >At a Glance</Link>
+              <Link 
+                to="/contact" 
+                onClick={toggleSidebar} 
+                className={location.pathname == "/contact" ? "header-link header-link-active" : "header-link"}
+                >Get in Touch</Link>
+              {/* <Link 
+                to="/personal" 
+                onClick={toggleSidebar} 
+                className={location.pathname == "/" ? "header-link header-link-active" : "header-link"}
+                >Outside of work</Link> */}
             </div>
             <div className="header-link dark-mode-container-fullsize">
               <div className="dark-mode-text-fullsize">Dark Mode</div>

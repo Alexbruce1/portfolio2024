@@ -206,7 +206,6 @@ function Home({ isMobile }) {
             </div>
           ))}
         </div>
-        <div className='home-p'>Check back soon to explore new features, including insights into who I am beyond work and a new AI integration.</div>
       </div>
     </div>
   );

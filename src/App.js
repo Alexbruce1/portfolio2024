@@ -11,9 +11,9 @@ import Footer from './Components/Footer';
 import Contact from './Components/Contact';
 
 function App() {
-  let [sidebarActive, setSidebarActive] = useState(false);
-  let [darkMode, setDarkMode] = useState(null);
-  let [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [sidebarActive, setSidebarActive] = useState(false);
+  const [darkMode, setDarkMode] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const sidebarRef = useRef(null);
   const hamburgerRef = useRef(null);
@@ -93,7 +93,8 @@ function App() {
           toggleSidebar={toggleSidebar}
           sidebarRef={sidebarRef}
           darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode} />
+          toggleDarkMode={toggleDarkMode} 
+          isMobile={isMobile}/>
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home isMobile={isMobile} />} />

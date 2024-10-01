@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import ABIcon from '../../src/assets/ABIcon.png';
+// import ABIcon from '../../src/assets/ABIcon.png';
 import Sidebar from "./Sidebar";
 
 function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMode, toggleDarkMode, isMobile }) {
   return(
     <header className="App-header">
       <div className='app-header-container'>
-        {!isMobile && (
+        {(!isMobile && (
           <div className="header-nav-container">
             <Link to="/" onClick={toggleSidebar} className="header-link">Home</Link>
             <Link to="/resume" onClick={toggleSidebar} className="header-link">Resume</Link>
@@ -44,7 +44,7 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
             </div>
           )}
         </div>
-        )}
+        ))}
         {/* <Link to="/" className='app-header-name'>
           <img src={ABIcon} className='app-AB-icon' alt="AB Icon" />
           <p className='header-title'>Alex</p>

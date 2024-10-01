@@ -8,7 +8,7 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
   return(
     <header className="App-header">
       <div className='app-header-container'>
-        {(!isMobile && (
+        {!isMobile && ((
           <div className="header-nav-container">
             <Link to="/" onClick={toggleSidebar} className="header-link">Home</Link>
             <Link to="/resume" onClick={toggleSidebar} className="header-link">Resume</Link>
@@ -23,7 +23,7 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
               </div>
             </div>
           </div>
-        ) || (
+        )) || ((
         <div className='header-hamburger-menu-container'>
           <div 
             className={sidebarActive ? 'header-hamburger-container-active' : 'header-hamburger-container'} 

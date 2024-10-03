@@ -14,10 +14,6 @@ h2, h3 {
   flex-direction: column;
 }
 
-.main-paragraph {
-  text-align: justify;
-}
-
 .app-main {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 1200px;

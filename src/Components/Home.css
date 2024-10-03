@@ -23,6 +23,10 @@
   -webkit-text-fill-color: var(--webkit-text-fill-color);
 }
 
+.main-paragraph {
+  text-align: left;
+}
+
 .home-p {
   font-weight: var(--main-p-weight);
   font-size: var(--main-p-size);

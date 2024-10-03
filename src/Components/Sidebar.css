@@ -1,9 +1,8 @@
 .sidebar {
-  background: linear-gradient(0deg, var(--background-color), var(--background-accent-color) 100%);
+  background: linear-gradient(0deg, var(--header-background-color), var(--background-accent-color) 100%);
   position: fixed;
   border-radius: 10px;
-  box-shadow: var(--big-shadow);
-  top: calc(var(--header-height) + 10px);
+  top: 70px;
   width: 300px;
   z-index: 10;
   padding: 1em;
@@ -82,20 +81,15 @@
   color: var(--accent-blue);
 }
 
-@media (max-width: 1000px) {
-  .sidebar {
-    top: 3em;
-  }
-}
-
 @media (max-width: 800px) {
   .sidebar {
-    width: 100%;
+    width: calc(100% - 20px);
     padding-bottom: 1em;
-    margin: 0;
+    margin: 0 10px;
     left: 0;
-    top: 2.3em;
+    background-color: var(--background-accent-color);
+    box-shadow: none;
     box-sizing: border-box;
-    border-radius: 0;
+    border-radius: 0 0 15px 15px;
   }
 }

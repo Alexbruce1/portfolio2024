@@ -9,11 +9,10 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
 
   return(
     <header className={sidebarActive ? "App-header App-header-active-sidebar" : "App-header"}>
-      {!isMobile && (
+      {!isMobile ? (
         <div className='app-header-container'>
           <Link to="/" className='app-header-name-fullsize'>
             <img src={ABIcon} className='app-AB-icon' alt="AB Icon" />
-            {/* <p className='header-title'>Alex</p> */}
           </Link>
           <div className="header-nav-container">
             <Link 
@@ -50,7 +49,7 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
             </div>
           </div>
         </div>
-      ) || (
+      ) : (
         <div className='app-header-container'>
           <div className='header-hamburger-menu-container'>
             <div 

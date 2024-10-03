@@ -1,17 +1,13 @@
 
 .App-header {
   color: #696969;
-  /* backdrop-filter: brightness(90%) blur(10px) saturate(50%); */
   background-color: var(--background-accent-color);
-  /* background-color: green; */
   position: sticky;
   top: 15px;
-  border-radius: 15px;
+  border-radius: 30px;
   margin: auto;
-  /* top: 0; */
   align-items: center;
   padding: 1em;
-  /* width: 100%; */
   width: 90%;
   min-width: 1220px;
   box-sizing: border-box;
@@ -22,13 +18,11 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  /* padding: 0 10%; */
 }
 
 .app-header-name-fullsize,
 .dark-mode-container-fullsize {
   width: 220px;
-  /* background-color: blueviolet; */
   display: flex;
   text-decoration: none;
   font-size: 10px;
@@ -39,7 +33,6 @@
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
-  /* background-color: green; */
 }
 
 .header-link {
@@ -84,24 +77,6 @@
   color: var(--light-text);
   margin: auto 0;
 }
-
-/* .header-hamburger-container-active > .hamburger-bar1 {
-  top: 20px;
-  box-shadow: none;
-  transform: rotate(45deg);
-}
-  
-.header-hamburger-container-active > .hamburger-bar2 {
-  top: 17px;
-  box-shadow: none;
-  transform: rotate(-45deg);
-}
-  
-.header-hamburger-container-active > .hamburger-bar3 {
-  top: 15px;
-  box-shadow: none;
-  transform: rotate(135deg);
-} */
       
 /* 2000px  ----------------------------------------------------------------------- */
 @media (max-width: 2000px) {
@@ -141,7 +116,7 @@
   .App-header {
     padding: 8px 1em;
     height: unset;
-    border-radius: 15px;
+    border-radius: 40px;
   }
   
   .app-header-container {
@@ -216,7 +191,7 @@
 
 @media (max-width: 800px) {
   .App-header-active-sidebar {
-    border-radius: 15px 15px 0 0;
+    border-radius: 40px 40px 0 0;
     min-width: calc(10vw - 20px);
   }
 }

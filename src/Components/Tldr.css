@@ -14,7 +14,7 @@
 
 .tldr-sub-header {
   font-size: var(--main-p-size);
-  text-align: justify;
+  text-align: left;
   padding: 1em 0;
 }
 

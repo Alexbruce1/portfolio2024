@@ -15,6 +15,7 @@
 .home-headline {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
+  line-height: 1.2;
   text-align: var(--text-align);
   background-clip: var(--background-clip);
   background: var(--blue-blue-background-gradient);
@@ -25,6 +26,7 @@
 .home-p {
   font-weight: var(--main-p-weight);
   font-size: var(--main-p-size);
+  line-height: 1.2;
 }
 
 .home-image-container {
@@ -361,7 +363,7 @@
 
   .home-link-contact {
     margin-bottom: 5em;
-    padding: 1em 3em;
+    padding: 10px 3em;
   }
 
   .tech-container-background {
@@ -404,23 +406,25 @@
 
   .home-headline {
     font-size: var(--font-size-small);
+    text-align: left;
+    margin: 0 20px;
   }
-
+  
   .home-links-container {
     flex-direction: column;
     height: unset;
     margin-top: unset;
   }
-
+  
   .home-link {
     width: 80%;
-    padding: 1em;
     margin: 1em auto 0;
   }
-
+  
   .home-p {
-    font-size: 20px;
-    text-align: center;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 20px;
   }
 
   .home-team-sub-headline {
@@ -433,6 +437,7 @@
   
   .home-team-paragraph ul {
     padding-top: 0;
+    padding-left: 10px;
     margin-top: 0;
   }
 

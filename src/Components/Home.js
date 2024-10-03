@@ -150,7 +150,6 @@ function Home({ isMobile }) {
         <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
       </div> }
       <div className='home-team-container'>
-        <div className='home-divider'></div>
         <div className='home-team-headline home-headline'>What I find important in a team</div>
         <div className='home-p home-team-sub-headline'>Collaboration is at the heart of any great project. I thrive in an environment where:</div>
         <div className='home-p home-team-paragraph'>

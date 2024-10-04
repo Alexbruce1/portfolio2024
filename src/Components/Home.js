@@ -133,7 +133,7 @@ function Home({ isMobile }) {
             Looking for seamless web solutions? Let’s build them together.
           </h1>
           <p className='home-p main-paragraph'>
-            Hey, thanks for checking out my site! I'm Alex! I'm a software developer who loves tackling challenges and making software better. I've led projects that streamline development and improve reliability, all while bridging the gap between development and QA. I'm big on collaboration, Agile, and creating features that really drive growth.
+            Hey, thanks for visiting! I’m Alex, a software developer who enjoys tackling challenges and improving software. I’ve led projects to streamline development, boost reliability, and bridge the gap between dev and QA. I'm big on collaboration, Agile, and creating features that really drive growth.         
           </p>
         </div>
         {isMobile ? <div className='home-links-container'>
@@ -186,7 +186,7 @@ function Home({ isMobile }) {
           </div>
         </div>
       </div>
-      <div className='recommendations-container'>
+      {/* <div className='recommendations-container'>
         <div className='home-headline recommendations-headline'>
           What others have said
         </div>
@@ -198,14 +198,13 @@ function Home({ isMobile }) {
             <div className='recommendation-box'>
               <div className='rec-top-row'>
                 <div className='rec-name'>{rec.name}</div>
-                {/* <div className='rec-role'>{rec.role}</div> */}
                 <div className='rec-relationship'>{rec.relationship}</div>
               </div>
               <div className='rec-comment'>"{rec.comment}"</div>
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

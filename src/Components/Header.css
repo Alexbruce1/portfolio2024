@@ -1,7 +1,7 @@
 
 .App-header {
   color: #696969;
-  background-color: var(--background-accent-color);
+  background-color: var(--header-background-color);
   position: sticky;
   top: 15px;
   border-radius: 30px;

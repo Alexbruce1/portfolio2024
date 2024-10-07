@@ -69,28 +69,28 @@ const icons = [
   { name: 'Agile', image: icon24 },
 ];
 
-const recommendations = [
-  {
-    name: 'Alexander E',
-    relationship: 'Fellow student',
-    comment: 'I have worked closely with Alex on several JavaScript-based projects and can confidently recommend him as someone who deeply understands programming concepts. Alex has a talent for summarizing difficult programming concepts and explaining them clearly and concisely, which he demonstrated to me be helping me understand several ES6 concepts in a mere 10 minutes during the 2nd module of our software education program. Alex is the sort of programmer who takes the necessary time to fully understand concepts before implementing him, which ensures that he proceeds through his work in a calm, methodical fashion. Furthermore, he is truly talented in CSS and design, which he demonstrated during our joint MovieTracker project. With his excellent grasp of JavaScript and CSS design, I am confident that Alex will be a prime asset to any company he chooses to work for.',
-  },
-  {
-    name: 'Benjamin H',
-    relationship: 'Fellow student',
-    comment: 'Alex was not only a skilled programmer but a skilled problem solver and excellent pair programming partner',
-  },
-  {
-    name: 'Justin S',
-    relationship: 'Fellow student',
-    comment: 'Alex and I collaborated together on a project. He was a strong communicator and his articulation when working through problems made working with him very pleasant, and productive.',
-  },
-  {
-    name: 'Aaron W',
-    relationship: 'Fellow student',
-    comment: 'Alex is a driven and talented software developer.',
-  },
-]
+// const recommendations = [
+//   {
+//     name: 'Alexander E',
+//     relationship: 'Fellow student',
+//     comment: 'I have worked closely with Alex on several JavaScript-based projects and can confidently recommend him as someone who deeply understands programming concepts. Alex has a talent for summarizing difficult programming concepts and explaining them clearly and concisely, which he demonstrated to me be helping me understand several ES6 concepts in a mere 10 minutes during the 2nd module of our software education program. Alex is the sort of programmer who takes the necessary time to fully understand concepts before implementing him, which ensures that he proceeds through his work in a calm, methodical fashion. Furthermore, he is truly talented in CSS and design, which he demonstrated during our joint MovieTracker project. With his excellent grasp of JavaScript and CSS design, I am confident that Alex will be a prime asset to any company he chooses to work for.',
+//   },
+//   {
+//     name: 'Benjamin H',
+//     relationship: 'Fellow student',
+//     comment: 'Alex was not only a skilled programmer but a skilled problem solver and excellent pair programming partner',
+//   },
+//   {
+//     name: 'Justin S',
+//     relationship: 'Fellow student',
+//     comment: 'Alex and I collaborated together on a project. He was a strong communicator and his articulation when working through problems made working with him very pleasant, and productive.',
+//   },
+//   {
+//     name: 'Aaron W',
+//     relationship: 'Fellow student',
+//     comment: 'Alex is a driven and talented software developer.',
+//   },
+// ]
 
 const profilePics = [profile, me1, me2, me3, me4, me5];
 
@@ -133,7 +133,7 @@ function Home({ isMobile }) {
             Looking for seamless web solutions? Let’s build them together.
           </h1>
           <p className='home-p main-paragraph'>
-            Hey, thanks for checking out my site! I'm Alex! I'm a software developer who loves tackling challenges and making software better. I've led projects that streamline development and improve reliability, all while bridging the gap between development and QA. I'm big on collaboration, Agile, and creating features that really drive growth.
+            Hey, thanks for visiting! I’m Alex, a software developer who enjoys tackling challenges and improving software. I’ve led projects to streamline development, boost reliability, and bridge the gap between dev and QA. I'm big on collaboration, Agile, and creating features that really drive growth.         
           </p>
         </div>
         {isMobile ? <div className='home-links-container'>
@@ -186,7 +186,7 @@ function Home({ isMobile }) {
           </div>
         </div>
       </div>
-      <div className='recommendations-container'>
+      {/* <div className='recommendations-container'>
         <div className='home-headline recommendations-headline'>
           What others have said
         </div>
@@ -198,14 +198,13 @@ function Home({ isMobile }) {
             <div className='recommendation-box'>
               <div className='rec-top-row'>
                 <div className='rec-name'>{rec.name}</div>
-                {/* <div className='rec-role'>{rec.role}</div> */}
                 <div className='rec-relationship'>{rec.relationship}</div>
               </div>
               <div className='rec-comment'>"{rec.comment}"</div>
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

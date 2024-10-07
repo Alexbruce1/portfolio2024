@@ -55,16 +55,8 @@
   height: 1em;
 }
 
-.footer-link-email:hover .footer-icon {
-  filter: invert(50%) saturate(5) sepia(100%) hue-rotate(180deg);
-}
-
-.footer-link-phone:hover img {
-  filter: invert(50%) saturate(5) sepia(100%) hue-rotate(110deg);
-}
-
-.footer-link-location:hover img {
-  filter: invert(50%) saturate(50) sepia(100%) hue-rotate(310deg);
+.footer-link:hover .footer-text {
+  filter: invert(90%);
 }
 
 .footer-icon {

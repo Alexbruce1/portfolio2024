@@ -6,10 +6,11 @@
   font-size: 2em;
   font-weight: var(--font-weight);
   text-align: center;
-  background-clip: var(--background-clip);
+  color: var(--medium-text);
+  /* background-clip: var(--background-clip);
   background: var(--blue-blue-background-gradient);
   -webkit-background-clip: var(--webkit-background-clip);
-  -webkit-text-fill-color: var(--webkit-text-fill-color);
+  -webkit-text-fill-color: var(--webkit-text-fill-color); */
 }
 
 .contact-form-border {

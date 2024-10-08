@@ -107,7 +107,7 @@ function Home({ isMobile }) {
 
   function updateProfilePic() {
     setProfilePicIndex((previous) => {
-      const nextIndex = (previous + 1) % profilePics.length; // This will loop back to 0 after reaching the last index
+      const nextIndex = (previous + 1) % profilePics.length;
       return nextIndex;
     });
   }

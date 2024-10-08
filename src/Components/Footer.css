@@ -56,7 +56,7 @@
 }
 
 .footer-link:hover .footer-text {
-  filter: invert(90%);
+  filter: invert(25%);
 }
 
 .footer-icon {

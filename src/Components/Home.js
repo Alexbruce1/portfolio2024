@@ -93,8 +93,9 @@ const icons = [
 // ]
 
 const profilePics = [profile, me1, me2, me3, me4, me5];
-
 const carImages = [car1, car2, car3, car4, car5, car6, car7, car8, car9];
+const pdfUrl = 'https://abresume.s3.amazonaws.com/ABruceResume.pdf';
+
 
 function Home({ isMobile }) {
   const { pathname } = useLocation();
@@ -171,7 +172,20 @@ function Home({ isMobile }) {
             </li>
           </ul>
         </div>
+        <div className='home-links-container'>
+          <div className="home-link resume-download">
+            <a 
+              href={pdfUrl} 
+              target="_blank" 
+              download="Alex_Bruce_Resume.pdf"
+              rel="noreferrer"
+              >
+              Download my resume
+            </a>
+          </div>
           <Link className='home-link home-link-contact' to={'/contact'}>Let's get in touch!</Link>
+
+        </div>
       </div>
       <div className='tech-container-background'>
         <div className='tech-container'>

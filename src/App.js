@@ -4,8 +4,6 @@ import './App.css';
 import Header from './Components/Header';
 import Tldr from './Components/Tldr';
 import Home from './Components/Home';
-// import AI from './Components/AI';
-// import Personal from './Components/Personal';
 import Resume from './Components/Resume';
 import Footer from './Components/Footer';
 import Contact from './Components/Contact';

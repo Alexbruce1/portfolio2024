@@ -20,11 +20,11 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
               onClick={toggleSidebar} 
               className={location.pathname === "/" ? "header-link header-link-active" : "header-link"}
             >Home</Link>
-            <Link 
+            {/* <Link 
               to="/resume" 
               onClick={toggleSidebar} 
               className={location.pathname === "/resume" ? "header-link header-link-active" : "header-link"}
-            >Resume</Link>
+            >Resume</Link> */}
             <Link 
               to="/tldr" 
               onClick={toggleSidebar} 

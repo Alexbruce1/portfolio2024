@@ -93,6 +93,11 @@
   background-color: var(--background-accent-color-shifted);
 }
 
+.resume-download a {
+  text-decoration: none;
+  color: var(--light-text);
+}
+
 /* Team section */
 
 .home-team-container {
@@ -351,11 +356,6 @@
 
   .main-paragraph {
     text-align: left;
-  }
-
-  .home-link-contact {
-    margin-bottom: 5em;
-    padding: 10px 3em;
   }
 
   .tech-container-background {

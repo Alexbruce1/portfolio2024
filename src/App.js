@@ -100,7 +100,7 @@ function App() {
             <Route path="/" element={<Home isMobile={isMobile} />} />
             <Route path="/tldr" element={<Tldr />} />
             {/* <Route path="/personal" element={<Personal />} /> */}
-            {/* <Route path="/resume" element={<Resume />} /> */}
+            <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

@@ -138,16 +138,16 @@ function Home({ isMobile }) {
           </p>
         </div>
         {isMobile ? <div className='home-links-container'>
-          <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+          {/* <Link className='home-link' to={'/resume'}>Check out my full resume</Link> */}
           <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
         </div> : null }
         <div className='home-image-container'>
           <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
-          <span class="image-tooltip">See More</span>
+          <span className="image-tooltip">See More</span>
         </div>
       </div>
       {isMobile ? null : <div className='home-links-container'>
-        <Link className='home-link' to={'/resume'}>Check out my full resume</Link>
+        {/* <Link className='home-link' to={'/resume'}>Check out my full resume</Link> */}
         <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
       </div> }
       <div className='home-team-container'>

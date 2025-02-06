@@ -2,25 +2,19 @@
 .App-header {
   color: #696969;
   background-color: var(--header-background-color);
-  position: sticky;
-  top: 15px;
-  border-radius: 30px;
-  margin: auto;
-  align-items: center;
-  padding: 1em;
-  width: 90%;
-  min-width: 1220px;
+  padding: 8px;
+  width: 100%;
   box-sizing: border-box;
-  z-index: 15;
 }
 
 .app-header-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.app-header-name-fullsize,
 .dark-mode-container-fullsize {
   width: 220px;
   display: flex;
@@ -67,7 +61,7 @@
 }
 
 .app-AB-icon {
-  height: 48px;
+  height: 36px;
   filter: var(--svg-filter);
   margin: 0;
 }
@@ -81,12 +75,9 @@
 /* 2000px  ----------------------------------------------------------------------- */
 @media (max-width: 2000px) {
   .App-header {
-    width: unset;
-    margin: 10px;
   }
   
   .app-header-container {
-    justify-content: space-between;
   }
   
   .header-nav-container {
@@ -102,30 +93,29 @@
 /* 1240px  ----------------------------------------------------------------------- */
 @media (max-width: 1240px) {
   .App-header {
-    min-width: unset;
     box-sizing: border-box;
-    padding: 1em;
   }
   
   .app-header-container {
-    max-width: 1200px;
-  }  
+    max-width: 1000px;
+  }
 }
 
 @media (max-width: 1000px) {
   .App-header {
-    padding: 8px 1em;
     height: unset;
-    border-radius: 40px;
   }
   
   .app-header-container {
-    height: 40px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+    display: block;
   }
   
+  .app-header-top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .header-hamburger-menu-container {
     transition-duration: .3s;
     cursor: pointer;
@@ -139,7 +129,6 @@
     height: 35px;
     width: 35px;
     cursor: pointer;
-    position: relative;
     z-index: 20;
   }
   
@@ -153,29 +142,33 @@
     z-index: 12;
     transition-duration: .2s;
   }
+
+  .hamburger-bar1 {
+    top: 4px;
+  }
   
   .hamburger-bar2 {
     top: 14px;
   }
   
   .hamburger-bar3 {
-    top: 28px;
+    top: 24px;
   }
   
   .header-hamburger-container-active > .hamburger-bar1 {
-    top: 2px;
+    top: 12px;
     box-shadow: none;
     transform: rotate(45deg);
   }
   
   .header-hamburger-container-active > .hamburger-bar2 {
-    top: 0px;
+    top: 10px;
     box-shadow: none;
     transform: rotate(-45deg);
   }
   
   .header-hamburger-container-active > .hamburger-bar3 {
-    top: -2px;
+    top: 8px;
     box-shadow: none;
     transform: rotate(135deg);
   }
@@ -191,7 +184,6 @@
 
 @media (max-width: 800px) {
   .App-header-active-sidebar {
-    border-radius: 40px 40px 0 0;
     min-width: calc(10vw - 20px);
   }
 }

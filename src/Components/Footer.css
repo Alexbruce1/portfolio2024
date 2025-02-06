@@ -43,6 +43,10 @@
   font-size: 20px;
 }
 
+.footer-dark-mode-container .dark-mode-container-fullsize {
+  margin: auto;
+}
+
 .links-container {
   margin: auto;
   width: auto;

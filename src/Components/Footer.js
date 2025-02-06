@@ -8,7 +8,7 @@ import phone from '../assets/tech-svgs/phone.svg';
 import pin from '../assets/tech-svgs/pin.svg';
 
 
-function Footer() {
+function Footer({ toggleDarkMode }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 840);
 
   useEffect(() => {
@@ -31,11 +31,20 @@ function Footer() {
           <p className='footer-about-p'>
             I'm a software developer who loves tackling challenges and making software better. I've led projects that streamline development and improve reliability, all while bridging the gap between development and QA. I'm big on collaboration, Agile, and creating features that really drive growth.
           </p>
+          <div className="footer-dark-mode-container">
+            <div className="dark-mode-container-fullsize">
+              <div className="dark-mode-text-fullsize">Dark Mode</div>
+              <div className="dark-mode-slider" onClick={toggleDarkMode}>
+                <div className="dark-mode-slider-dot"></div>
+                <div className="dark-mode-enabled-dot"></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className='footer-section footer-contact'>
-        <Link className='nav-link' to="/contact">
-          <h3>Contact</h3>
-        </Link>
+          <Link className='nav-link' to="/contact">
+            <h3>Contact</h3>
+          </Link>
 
           <div className='links-container'>
             <a className='footer-link' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/alexbbruce/'>
@@ -60,12 +69,6 @@ function Footer() {
             </div>
           </div>
         </div>
-        { isMobile ? <div className='nav-link-container'>
-          <Link className='nav-link' to="/">Home</Link>
-          <Link className='nav-link' to="/resume">Resume</Link>
-          <Link className='nav-link' to="/tldr">TL;DR</Link>
-          <Link className='nav-link' to="/contact">Contact</Link>
-        </div> : null}
       </div>
     </div>
   )

@@ -103,7 +103,8 @@ function App() {
           </Routes>
         </div>
         {/* <AI /> */}
-        <Footer />
+        <Footer
+          toggleDarkMode={toggleDarkMode}/>
       </div>
     </Router>
   );

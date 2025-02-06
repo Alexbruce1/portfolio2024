@@ -1,10 +1,6 @@
 .sidebar {
   background: linear-gradient(0deg, var(--background-accent-color-shifted), var(--background-accent-color) 100%);
-  position: fixed;
   border-radius: 10px;
-  top: 70px;
-  width: 300px;
-  z-index: 10;
   padding: 1em;
   padding-bottom: 0;
   font-weight: var(--main-p-weight);
@@ -81,16 +77,12 @@
   color: var(--accent-blue);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .sidebar {
-    width: calc(100% - 20px);
     padding-bottom: 1em;
-    margin: 0 10px;
-    left: 0;
-    background-color: var(--background-accent-color);
-    /* background-color: var(--background-accent-color); */
+    margin: 0;
+    background: unset;
     box-shadow: none;
     box-sizing: border-box;
-    border-radius: 0 0 40px 40px;
   }
 }

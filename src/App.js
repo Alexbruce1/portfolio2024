@@ -102,7 +102,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-        {/* <AI /> */}
         <Footer
           toggleDarkMode={toggleDarkMode}/>
       </div>

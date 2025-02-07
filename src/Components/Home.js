@@ -138,8 +138,7 @@ function Home({ isMobile }) {
           </p>
         </div>
         {isMobile ? <div className='home-links-container'>
-          {/* <Link className='home-link' to={'/resume'}>Check out my full resume</Link> */}
-          <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+          <Link className='home-link' to={'/tldr'}>TL;DR</Link>
         </div> : null }
         <div className='home-image-container'>
           <img className='profile-img-home' src={profilePics[profilePicIndex]} alt="Profile" onClick={updateProfilePic} />
@@ -147,8 +146,7 @@ function Home({ isMobile }) {
         </div>
       </div>
       {isMobile ? null : <div className='home-links-container'>
-        {/* <Link className='home-link' to={'/resume'}>Check out my full resume</Link> */}
-        <Link className='home-link' to={'/tldr'}> See my professional tl;dr</Link>
+        <Link className='home-link' to={'/tldr'}>TL;DR</Link>
       </div> }
       <div className='home-team-container'>
         <div className='home-team-headline home-headline'>What I find important in a team</div>
@@ -200,25 +198,6 @@ function Home({ isMobile }) {
           </div>
         </div>
       </div>
-      {/* <div className='recommendations-container'>
-        <div className='home-headline recommendations-headline'>
-          What others have said
-        </div>
-        <div className='recommendations-sub-headline'>
-          Recommendations from LinkedIn
-        </div>
-        <div className='recommendations'>
-          {recommendations.map((rec) => (
-            <div className='recommendation-box'>
-              <div className='rec-top-row'>
-                <div className='rec-name'>{rec.name}</div>
-                <div className='rec-relationship'>{rec.relationship}</div>
-              </div>
-              <div className='rec-comment'>"{rec.comment}"</div>
-            </div>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 }

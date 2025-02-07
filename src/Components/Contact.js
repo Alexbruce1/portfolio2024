@@ -64,10 +64,11 @@ function Contact() {
                 className="contact-field contact-name-input"
                 type="name"
                 name="name"
+                title="Name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-              />
+                />
             </div>
             <div className="contact-section contact-email-section">
               <label className="contact-label">
@@ -77,10 +78,11 @@ function Contact() {
                 className="contact-field contact-email-input"
                 type="email"
                 name="email"
+                title="Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-              />
+                />
             </div>
             <div className="contact-section contact-message-section">
               <label className="contact-label">
@@ -88,6 +90,7 @@ function Contact() {
               </label>
               <textarea
                 className="contact-field contact-message-input"
+                title="Message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}

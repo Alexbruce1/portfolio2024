@@ -10,77 +10,37 @@ import Contact from './Components/Contact';
 
 function App() {
   const [sidebarActive, setSidebarActive] = useState(false);
-  const [darkMode, setDarkMode] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [darkMode, setDarkMode] = useState(() => JSON.parse(localStorage.getItem('darkMode')) ?? true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1001);
 
   const sidebarRef = useRef(null);
   const hamburgerRef = useRef(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1001);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth < 1001);
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode !== null) {
-      setDarkMode(JSON.parse(savedDarkMode));
-    } else {
-      setDarkMode(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (darkMode !== null) {
-      localStorage.setItem('darkMode', JSON.stringify(darkMode));
-    }
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   useEffect(() => {
-    if (darkMode !== null) {
-      document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-    }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode);
-  };
-
-  const toggleSidebar = () => {
-    setSidebarActive(previousSetting => !previousSetting);
-  };
-
-  useEffect(() => {
+    if (!sidebarActive) return;
+    
     const handleClickOutside = (event) => {
-      if (
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target) && 
-        hamburgerRef.current &&
-        !hamburgerRef.current.contains(event.target)
-      ) {
+      if (!sidebarRef.current?.contains(event.target) && !hamburgerRef.current?.contains(event.target)) {
         setSidebarActive(false);
       }
     };
 
-    if (sidebarActive) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [sidebarActive]);
 
-  if (darkMode === null) {
-    return null;
-  }
+  if (darkMode === null) return null;
 
   return (
     <Router>
@@ -88,22 +48,21 @@ function App() {
         <Header 
           sidebarActive={sidebarActive} 
           hamburgerRef={hamburgerRef}
-          toggleSidebar={toggleSidebar}
+          toggleSidebar={() => setSidebarActive(prev => !prev)}
           sidebarRef={sidebarRef}
           darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode} 
-          isMobile={isMobile}/>
+          toggleDarkMode={() => setDarkMode(prev => !prev)} 
+          isMobile={isMobile}
+        />
         <div className='app-main'>
           <Routes>
             <Route path="/" element={<Home isMobile={isMobile} />} />
             <Route path="/tldr" element={<Tldr />} />
-            {/* <Route path="/personal" element={<Personal />} /> */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-        <Footer
-          toggleDarkMode={toggleDarkMode}/>
+        <Footer toggleDarkMode={() => setDarkMode(prev => !prev)} />
       </div>
     </Router>
   );

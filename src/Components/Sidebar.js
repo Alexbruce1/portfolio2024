@@ -7,7 +7,7 @@ function Sidebar({ darkMode, toggleSidebar, toggleDarkMode }) {
     <div className="sidebar">
       <Link to="/" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">Home</Link>
       <Link to="/resume" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">Resume</Link>
-      <Link to="/tldr" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">At a Glance</Link>
+      <Link to="/tldr" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">TL;DR</Link>
       <Link to="/contact" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">Get in Touch</Link>
       {/* <Link to="/personal" onClick={toggleSidebar} className="sidebar-section sidebar-text-section">Outside of work</Link> */}
       <div className="sidebar-section dark-mode-container">

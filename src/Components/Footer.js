@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import LI from '../assets/tech-svgs/li.svg';
@@ -9,18 +9,6 @@ import pin from '../assets/tech-svgs/pin.svg';
 
 
 function Footer({ toggleDarkMode }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 840);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1001);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
 
   return(
     <div className='Footer'>

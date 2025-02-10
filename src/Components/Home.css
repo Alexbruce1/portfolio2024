@@ -41,7 +41,6 @@
 .profile-img-home {
   cursor: pointer;
   border-radius: 1em;
-  box-shadow: var(--big-shadow);
   object-fit: contain;
   max-width: 100%;
   transition-duration: .25s;
@@ -62,10 +61,6 @@
 
 .profile-img-home:hover ~ .image-tooltip {
   visibility: visible;
-}
-
-.profile-img-home:hover {
-  box-shadow: var(--bigger-shadow);
 }
 
 /* Links section */
@@ -318,10 +313,6 @@
     visibility: hidden;
   }
 
-  .profile-img-home:hover {
-    box-shadow: var(--big-shadow);
-  }
-
   .home-team-container {
     background: var(--blue-blue-background-gradient);
     padding: 4em 10px;
@@ -395,7 +386,7 @@
   .home-text {
     padding: 0;
   }
-
+  
   .home-headline {
     font-size: var(--font-size-small);
     text-align: left;
@@ -411,6 +402,7 @@
   .home-link {
     width: 80%;
     margin: 1em auto 0;
+    padding: 10px;
   }
   
   .home-p {

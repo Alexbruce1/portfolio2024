@@ -5,4 +5,6 @@ import me3 from './me3.jpg';
 import me4 from './me4.jpg';
 import me5 from './me5.jpg';
 
-export default [profile, me1, me2, me3, me4, me5];
+const profilePics = [profile, me1, me2, me3, me4, me5];
+
+export default profilePics;

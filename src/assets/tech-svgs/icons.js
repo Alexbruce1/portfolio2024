@@ -23,7 +23,7 @@ import icon22 from './icon22.svg';
 import icon23 from './icon23.svg';
 import icon24 from './icon24.svg';
 
-export default [
+const icons = [
   { name: 'SQL', image: icon1 },
   { name: 'AWS', image: icon2 },
   { name: 'CSS3', image: icon3 },
@@ -49,3 +49,5 @@ export default [
   { name: 'Postman', image: icon23 },
   { name: 'Agile', image: icon24 },
 ];
+
+export default icons;

@@ -1,8 +1,9 @@
 :root {
   --header-background-color: #282828;
-  --background-color: #232323;
+  --background-color: #001f3f;
   --background-accent-color: #333;
   --background-accent-color-shifted: #555;
+  --accent-orange: #E67E22;
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient-ios: linear-gradient(180deg, #5fc9f8 1%, #147efb 100%);
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4ca1c6 1%, #1069c8 75%);

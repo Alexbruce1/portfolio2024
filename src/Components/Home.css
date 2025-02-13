@@ -1,13 +1,23 @@
 /* Main home section */
 
+.content-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .home-main-container {
+  background: var(--blue-to-main-bg-background);
+}
+
+.main-content-container {
   display: flex;
   justify-content: space-between;
-  margin: var(--container-margin);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .home-text {
-  padding: 1em 0;
+  text-align: left;
   margin-right: 2em;
   max-width: 60%;
 }
@@ -17,14 +27,22 @@
   font-weight: var(--font-weight);
   line-height: 1.2;
   text-align: var(--text-align);
-  background-clip: var(--background-clip);
+  color: #FFF;
+  /* background-clip: var(--background-clip);
   background: var(--blue-blue-background-gradient);
   -webkit-background-clip: var(--webkit-background-clip);
-  -webkit-text-fill-color: var(--webkit-text-fill-color);
+  -webkit-text-fill-color: var(--webkit-text-fill-color); */
+}
+
+.page-header {
+  font-size: 120px;
+  margin: 0;
+  letter-spacing: -4px;
 }
 
 .main-paragraph {
   text-align: left;
+  margin-top: 0;
 }
 
 .home-p {
@@ -36,14 +54,17 @@
 .home-image-container {
   padding: 3em 0;
   width: 40%;
+  /* background-color: #E67E22; */
 }
 
 .profile-img-home {
   cursor: pointer;
-  border-radius: 1em;
+  /* border-radius: 4px; */
   object-fit: contain;
   max-width: 100%;
   transition-duration: .25s;
+  border: 8px solid var(--accent-orange);
+  box-shadow: 0 0 80px -40px rgba(255, 255, 255, .7);
 }
 
 .image-tooltip {
@@ -73,19 +94,22 @@
 }
 
 .home-link {
-  background-color: var(--background-accent-color);
+  /* background-color: var(--background-accent-color); */
+  border: 2px solid var(--light-text);
   color: var(--light-text);
   font-size: 2em;
   font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 1em;
+  border-radius: 50px;
+  padding: 10px 40px;
   text-decoration: none;
   margin: auto;
   transition-duration: .2s;
 }
 
 .home-link:hover {
-  background-color: var(--background-accent-color-shifted);
+  background-color: #147efb;
+  color: var(--background-color);
+  box-shadow: 10px 10px 20px rgba(var(--background-color), 1);
 }
 
 .resume-download a {
@@ -138,13 +162,15 @@
 
 /* Technologies I've Used section */
 
+.tech-container-background {
+  margin-top: -1px;
+  color: var(--light-text);
+}
+
 .tech-container {
   border-radius: 1em;
-  background: linear-gradient(200deg, var(--background-accent-color), var(--background-accent-color-shifted));
-  /* box-shadow: var(--colorful-shadow);
-  animation: var(--colorful-shadow-animation); */
   padding: 2em 0;
-  margin: var(--container-margin);
+  /* margin: var(--container-margin); */
 }
 
 .tech-logo-container {
@@ -168,80 +194,6 @@
   color: var(--light-text);
   letter-spacing: 2px;
 }
-
-/* Recommendations */
-
-.recommendations-container {
-  margin: var(--container-margin);
-  padding: 2em auto;
-  width: 100%;
-}
-
-.recommendations-headline {
-  text-align: center;
-}
-
-.recommendations-sub-headline {
-  font-size: 25px;
-  color: var(--light-text);
-  text-align: center;
-}
-
-.recommendations {
-  margin: var(--container-margin);
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2em;
-}
-
-.recommendation-box {
-  backdrop-filter: brightness(120%) blur(10px) saturate(50%);
-  padding: 2em;
-  padding-bottom: 1em;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.rec-top-row {
-  display: flex;
-}
-
-.rec-name {
-  font-weight: 600;
-  padding-right: 2em;
-}
-
-.rec-relationship {
-  opacity: 65%;
-}
-
-.rec-comment {
-  border-radius: 5px;
-  margin-top: 10px;
-  padding: 1em 0;
-  box-sizing: border-box;
-  overflow: scroll;
-  height: 5em;
-  font-weight: 500;
-}
-
-/* Animations */
-
-/* @keyframes pulsate-shadow {
-  0% {
-    box-shadow: 8em 8em 5em -9em #fecb2e,
-                -8em -8em 5em -9em #fc3158,
-                8em -8em 5em -9em #53d769,
-                -8em 8em 5em -9em #5fc9f8;
-  }
-  100% {
-  box-shadow: 8em 8em 5em -12em #fecb2e,
-              -8em -8em 5em -12em #fc3158,
-              8em -8em 5em -12em #53d769,
-              -8em 8em 5em -12em #5fc9f8;
-  }
-} */
 
 /* 1240px ------------------------------------------------------ */
 @media (max-width: 1240px) {

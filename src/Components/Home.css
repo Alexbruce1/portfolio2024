@@ -332,7 +332,7 @@
   }
   
   .home-headline {
-    font-size: var(--font-size-small);
+    font-size: 64px;
     text-align: left;
     margin: 0 20px;
   }

@@ -6,7 +6,8 @@ h2, h3 {
 .App {
   color: var(--light-text);
   text-align: center;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background: var(--background-color);
 }
 
 .Page {

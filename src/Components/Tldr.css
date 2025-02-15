@@ -1,15 +1,12 @@
 .Tldr {
-  margin: var(--container-margin);
+  margin: 0;
+  padding: 24px 0;
 }
 
 .tldr-header {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
-  text-align: var(--text-align);
-  background-clip: var(--background-clip);
-  background: var(--blue-blue-background-gradient);
-  -webkit-background-clip: var(--webkit-background-clip);
-  -webkit-text-fill-color: var(--webkit-text-fill-color);
+  text-align: center;
 }
 
 .tldr-sub-header {
@@ -33,7 +30,7 @@
   text-align: start;
   font-size: 2em;
   font-weight: 900;
-  background-color: var(--background-accent-color);
+  background-color: var(--background-accent-color-shifted);
   width: fit-content;
   padding: .25em .5em;
   margin: 10px 0;
@@ -63,7 +60,7 @@
 .tldr-message-read {
   text-align: end;
   font-weight: 600;
-  color: #999;
+  color: var(--dark-mode-text);
 }
 
 .learn-more-button {

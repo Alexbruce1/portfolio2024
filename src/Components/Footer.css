@@ -87,7 +87,7 @@
 }
 
 /* 1000px ------------------------------------------------------ */
-@media (max-width: 840px) {
+@media (max-width: 1000px) {
   .footer-items-container {
     max-width: 90%;
   }
@@ -112,7 +112,7 @@
   }
 
   .footer-contact * {
-    visibility: hidden;
+    display: none;
     height: 0;
   }
 
@@ -121,7 +121,7 @@
   }
   
   .footer-link-location {
-    visibility: hidden;
+    display: none;
   }
 
   .nav-link-container {

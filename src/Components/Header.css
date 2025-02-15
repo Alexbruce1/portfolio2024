@@ -79,12 +79,6 @@
       
 /* 2000px  ----------------------------------------------------------------------- */
 @media (max-width: 2000px) {
-  .App-header {
-  }
-  
-  .app-header-container {
-  }
-  
   .header-nav-container {
     width: 50%;
   }
@@ -102,7 +96,7 @@
   }
   
   .app-header-container {
-    max-width: 1000px;
+    max-width: 90%;
   }
 }
 

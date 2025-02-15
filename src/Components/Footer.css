@@ -6,6 +6,7 @@
   font-size: calc(10px + 2vmin);
   padding: 0;
   width: 100%;
+  border-top: 1px solid var(--dark-mode-text);
 }
 
 .footer-items-container {
@@ -85,12 +86,19 @@
   text-decoration: none;
 }
 
+/* 1000px ------------------------------------------------------ */
+@media (max-width: 1000px) {
+  .footer-items-container {
+    max-width: 90%;
+  }
+}
 
 /* 840px ------------------------------------------------------ */
 @media (max-width: 840px) {
   .footer-items-container {
     display: block;
     padding: 0;
+    max-width: unset;
   }
 
   .footer-about {
@@ -104,7 +112,7 @@
   }
 
   .footer-contact * {
-    visibility: hidden;
+    display: none;
     height: 0;
   }
 
@@ -113,7 +121,7 @@
   }
   
   .footer-link-location {
-    visibility: hidden;
+    display: none;
   }
 
   .nav-link-container {

@@ -1,7 +1,5 @@
-
 .App-header {
   color: #696969;
-  /* background-color: var(--header-background-color); */
   padding: 8px;
   padding-top: 12px;
   width: 100%;
@@ -10,6 +8,7 @@
   position: sticky;
   backdrop-filter: blur(10px);
   top: -4px;
+  z-index: 10;
 }
 
 .app-header-container {
@@ -36,6 +35,7 @@
 
 .header-link {
   font-size: 20px;
+  font-weight: 600;
   text-decoration: none;
   color: var(--light-text);
   margin: auto 0;
@@ -43,7 +43,7 @@
 }
 
 .header-link-active {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .header-link:hover {

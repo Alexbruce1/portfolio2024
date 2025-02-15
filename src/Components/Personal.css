@@ -7,16 +7,16 @@
 .photo-masonry-grid {
   display: flex;
   margin-top: 20px;
-  gap: 10px; /* Adds both horizontal and vertical spacing */
+  gap: 10px;
 }
 
 .photo-masonry-grid_column {
-  padding-left: 5px; /* Optional: Adds a bit of padding to create gutter */
-  background-clip: padding-box; /* Ensures the padding is not considered as part of the column width */
+  padding-left: 5px;
+  background-clip: padding-box;
 }
 
 .photo-grid-item {
-  margin-bottom: 10px; /* This could be removed if using gap for consistency */
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

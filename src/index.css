@@ -1,9 +1,8 @@
 :root {
   --header-background-color: #282828;
   --background-color: #001f3f;
-  --background-accent-color: #333;
+  --background-accent-color: #222;
   --background-accent-color-shifted: #555;
-  --accent-orange: #E67E22;
   --tldr-p-background-color: #147efb;
   --tldr-p-background-color-gradient-ios: linear-gradient(180deg, #5fc9f8 1%, #147efb 100%);
   --tldr-p-background-color-gradient: linear-gradient(180deg, #4ca1c6 1%, #1069c8 75%);
@@ -38,7 +37,6 @@
   --font-size: 4em;
   --font-size-small: 2em;
   --font-weight: 600;
-  --text-align: left;
   --background-clip: text;
   --webkit-background-clip: text;
   --webkit-text-fill-color: transparent;
@@ -51,9 +49,9 @@
 
 [data-theme="light"] {
   --header-background-color: #ccc;
-  --background-color: #ddd;
-  --background-accent-color: #bbb;
-  --background-accent-color-shifted: #999;
+  --background-color: #3D7CBF;
+  --background-accent-color: #FFF;
+  --background-accent-color-shifted: #BBB;
   --tldr-p-background-color: #147efb;
   --blue-blue-background-gradient: linear-gradient(180deg, #0033FE, #147efb);
   --blue-to-main-bg-background: linear-gradient(180deg, #147efb 0%, #ddd 100%);

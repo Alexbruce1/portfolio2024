@@ -29,11 +29,6 @@ function Header({ sidebarActive, hamburgerRef, toggleSidebar, sidebarRef, darkMo
               onClick={toggleSidebar} 
               className={location.pathname === "/contact" ? "header-link header-link-active" : "header-link"}
             >Get in Touch</Link>
-            {/* <Link 
-              to="/personal" 
-              onClick={toggleSidebar} 
-              className={location.pathname === "/" ? "header-link header-link-active" : "header-link"}
-            >Outside of work</Link> */}
         </div>
       ) : (
         <div className="app-header-container">

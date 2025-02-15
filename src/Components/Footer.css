@@ -1,4 +1,5 @@
 .Footer {
+  background-color: var(--background-accent-color);
   backdrop-filter: brightness(90%) blur(10px) saturate(50%);
   align-items: center;
   justify-content: space-between;

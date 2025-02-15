@@ -178,6 +178,11 @@
 
 /* 1240px ------------------------------------------------------ */
 @media (max-width: 1240px) {
+  .content-container {
+    padding: 24px 0;
+    display: block;
+  }
+
   .home-main-container {
     display: block;
   }
@@ -194,8 +199,10 @@
   }
 
   .home-link {
-    background-color: var(--background-accent-color);
     color: var(--light-text);
+    display: block;
+    text-align: center;
+    margin: 24px auto;
   }
 
   .home-image-container {
@@ -221,6 +228,10 @@
 
 /* 1000px ------------------------------------------------------ */
 @media (max-width: 1000px) {
+  .content-container {
+    max-width: 90%;
+  }
+
   .home-headline {
     font-size: 2em;
   }
@@ -232,7 +243,7 @@
   
   .home-link {
     width: 40%;
-    padding: 10px 0;
+    padding: 10px 20px;
     font-size: 1.5em;
   }
   
@@ -283,7 +294,7 @@
   }
 
   .tech-container-background {
-    margin-top: -1px;
+    padding-top: 24px;
     background: var(--blue-to-main-bg-background);
   }
   

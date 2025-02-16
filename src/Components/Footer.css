@@ -32,8 +32,9 @@
 }
 
 .footer-contact {
-  width: 16em;
-  margin-left: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-link {
@@ -91,6 +92,10 @@
   .footer-items-container {
     max-width: 90%;
   }
+
+  .footer-icon {
+    height: 36px;
+  }
 }
 
 /* 840px ------------------------------------------------------ */
@@ -107,17 +112,13 @@
   }
 
   .footer-section {
-    width: 100%;
+    width: 90%;
     margin: auto;
-  }
-
-  .footer-contact * {
-    display: none;
-    height: 0;
+    padding-bottom: 24px;
   }
 
   .footer-link {
-    height: 0;
+    margin: 20px 0;
   }
   
   .footer-link-location {

@@ -62,7 +62,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-        <Footer toggleDarkMode={() => setDarkMode(prev => !prev)} />
+        <Footer toggleDarkMode={() => setDarkMode(prev => !prev)} isMobile={isMobile} />
       </div>
     </Router>
   );

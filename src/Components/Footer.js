@@ -6,12 +6,26 @@ import GH from "../assets/tech-svgs/gh.svg";
 import email from "../assets/tech-svgs/email.svg";
 import phone from "../assets/tech-svgs/phone.svg";
 
-function Footer({ toggleDarkMode }) {
+function Footer({ toggleDarkMode, isMobile }) {
 
   const location = useLocation();
 
   if (location.pathname === "/contact") {
-    return null;
+    return (
+      <div className="Footer">
+        <div className="Footer-contact">
+          <div className="footer-dark-mode-container-mobile">
+            <div className="dark-mode-container-fullsize">
+              <div className="dark-mode-text-fullsize">Dark Mode</div>
+              <div className="dark-mode-slider" onClick={toggleDarkMode}>
+                <div className="dark-mode-slider-dot"></div>
+                <div className="dark-mode-enabled-dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return(
@@ -30,6 +44,17 @@ function Footer({ toggleDarkMode }) {
           <a className="footer-link footer-link-phone" href="tel:3035643255">
             <img alt="phone icon" src={phone} className="li-icon footer-icon bw-icon" />
           </a>
+          {!isMobile && (
+            <div className="footer-dark-mode-container">
+              <div className="dark-mode-container-fullsize">
+                <div className="dark-mode-text-fullsize">Dark Mode</div>
+                <div className="dark-mode-slider" onClick={toggleDarkMode}>
+                  <div className="dark-mode-slider-dot"></div>
+                  <div className="dark-mode-enabled-dot"></div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

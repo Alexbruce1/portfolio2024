@@ -1,5 +1,5 @@
 .Footer {
-  background-color: var(--background-accent-color);
+  background-color: var(--background-color);
   backdrop-filter: brightness(90%) blur(10px) saturate(50%);
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
   border-top: 1px solid var(--dark-mode-text);
 }
 
-.footer-items-container {
+.footer-items-container, .Footer-contact {
   display: flex;
   margin: 0 auto;
   padding: 12px;
@@ -69,10 +69,7 @@
 .footer-icon {
   margin: 0;
   height: 25px;
-}
-
-.bw-icon {
-  filter: var(--bw-icon-filter);
+  filter: brightness(0) invert(1);
 }
 
 .footer-text {
@@ -85,6 +82,10 @@
 
 .footer-text-location {
   text-decoration: none;
+}
+
+.footer-dark-mode-container-mobile {
+  margin: auto;
 }
 
 /* 1000px ------------------------------------------------------ */

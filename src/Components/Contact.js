@@ -59,7 +59,7 @@ function Contact() {
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="contact-section contact-name-section">
                 <label className="contact-label">
-                  What's your name?
+                  Name
                 </label>
                 <input
                   className="contact-field contact-name-input"
@@ -73,7 +73,7 @@ function Contact() {
               </div>
               <div className="contact-section contact-email-section">
                 <label className="contact-label">
-                  What's your email address?
+                  Email
                 </label>
                 <input
                   className="contact-field contact-email-input"
@@ -87,7 +87,7 @@ function Contact() {
               </div>
               <div className="contact-section contact-message-section">
                 <label className="contact-label">
-                  What would you like to say?
+                  Message
                 </label>
                 <textarea
                   className="contact-field contact-message-input"
@@ -102,9 +102,8 @@ function Contact() {
               <div className="form-status">{status}</div>
             </form>
           </div>
-        </div>
-        <div className="cont act-links-container">
-          <div className="contact-header">You’re welcome to explore my links below!</div>
+          <div className="contact-links-container">
+            <div className="contact-header">You’re welcome to explore my links below!</div>
             <div className="contact-form contact-link-container">
             <a className='contact-link' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/alexbbruce/'>
                 <img alt='Linkedin icon' src={LI} className='li-icon contact-icon' />
@@ -115,6 +114,7 @@ function Contact() {
                 <p className='contact-text'>GitHub</p>
               </a>
             </div>
+          </div>
         </div>
       </div>
     </div>

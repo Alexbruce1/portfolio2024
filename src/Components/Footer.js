@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Footer.css";
 import LI from "../assets/tech-svgs/li.svg";
 import GH from "../assets/tech-svgs/gh.svg";
@@ -7,6 +7,12 @@ import email from "../assets/tech-svgs/email.svg";
 import phone from "../assets/tech-svgs/phone.svg";
 
 function Footer({ toggleDarkMode }) {
+
+  const location = useLocation();
+
+  if (location.pathname === "/contact") {
+    return null;
+  }
 
   return(
     <div className="Footer">

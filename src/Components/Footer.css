@@ -12,7 +12,7 @@
 .footer-items-container {
   display: flex;
   margin: 0 auto;
-  padding: 1em;
+  padding: 12px;
   max-width: 1200px;
 }
 
@@ -88,11 +88,13 @@
 }
 
 /* 1000px ------------------------------------------------------ */
-@media (max-width: 1000px) {
-  .footer-items-container {
+@media (max-width: 1240px) {
+  .footer-contact {
     max-width: 90%;
   }
+}
 
+@media (max-width: 1000px) {
   .footer-icon {
     height: 36px;
   }

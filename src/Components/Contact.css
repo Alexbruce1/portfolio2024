@@ -1,9 +1,6 @@
 .Contact {
-  background-color: var(--background-accent-color);
-  padding: 24px 0;
-}
-
-.contact-container {
+  /* background-color: var(--background-accent-color); */
+  padding: 120px 0;
 }
 
 .contact-header {
@@ -26,7 +23,7 @@
 }
 
 .contact-form {
-  background-color: var(--background-accent-color);
+  background-color: var(--background-color);
   margin: 0;
   border-radius: 8px;
   background-clip: border-box;
@@ -48,13 +45,13 @@
 
 .contact-field {
   background-color: var(--background-accent-color);
-  opacity: .4;
+  opacity: .9;
   color: var(--light-text);
   font-size: 15px;
   font-weight: 600;
   padding: 1em;
   outline: none;
-  border: 5px solid var(--background-accent-color-shifted);
+  border: 3px solid var(--background-accent-color-shifted);
   border-radius: 10px;
   transition-duration: .3s;
   width: 100%;
@@ -63,7 +60,8 @@
 }
 
 .contact-field:focus {
-  border: 5px solid var(--light-text);
+  border: 3px solid var(--light-text);
+  opacity: 1;
 }
 
 .contact-message-input {

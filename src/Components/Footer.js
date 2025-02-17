@@ -28,7 +28,7 @@ function Footer({ toggleDarkMode, isMobile }) {
     );
   }
 
-  return(
+  return (
     <div className="Footer">
       <div className="footer-items-container">
         <div className="footer-section footer-contact">

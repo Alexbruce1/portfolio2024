@@ -154,6 +154,31 @@
   padding: 2em 0;
 }
 
+.tech-stack {
+  text-align: left;
+}
+
+.tech-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tech-icon-small {
+  height: 24px;
+}
+
+.technology-name {
+  font-weight: 700;
+  margin: 0 8px;
+}
+
+.star-container {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
 .tech-logo-container {
   display: flex;
   justify-content: space-between;

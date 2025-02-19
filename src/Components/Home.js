@@ -24,7 +24,7 @@ function Home({ isMobile }) {
             <p className="home-p main-paragraph">
               Hey, thanks for visiting my page! I'm a software developer based in Denver. I specialize in frontend web development, but I've spent my career so far in varioius areas including quality engineering and ERP application development.
             </p>
-            {!isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
+            {!isMobile && <Link className="home-link home-link-tldr" to={"/tldr"}>TL;DR</Link>}
           </div>
           {isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
           <div className="home-image-container">
@@ -66,15 +66,29 @@ function Home({ isMobile }) {
       <div className="tech-container-background">
         <div className="content-container">
           <div className="tech-container">
-            <h2>Technologies I've used</h2>
-            <div className="tech-logo-container">
+            <h2>Technologies I Use</h2>
+            <div className="tech-stack">
+              {icons.map(({ name, image, stars, proficiency }, index) => (
+                <div key={index} className="tech-group">
+                  <img src={image} loading="lazy" className="tech-icon-small" alt={name} />
+                  <p className="technology-name">{name}: </p>
+                  <div className="star-container">
+                    {Array.from({ length: stars }, (_, i) => (
+                      <p key={i}>★</p>
+                    ))}
+                  </div>
+                  <p>{proficiency}</p>
+                </div>
+              ))}
+            </div>
+            {/* <div className="tech-logo-container">
               {icons.map(({ name, image }, index) => (
                 <div key={index} className="logo-group">
                   <img src={image} loading="lazy" className="tech-icon" alt={name} />
                   <p className="icon-name">{name}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

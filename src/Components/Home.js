@@ -24,7 +24,7 @@ function Home({ isMobile }) {
             <p className="home-p main-paragraph">
               Hey, thanks for visiting my page! I'm a software developer based in Denver. I specialize in frontend web development, but I've spent my career so far in varioius areas including quality engineering and ERP application development.
             </p>
-            {!isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
+            {!isMobile && <Link className="home-link home-link-tldr" to={"/tldr"}>TL;DR</Link>}
           </div>
           {isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
           <div className="home-image-container">

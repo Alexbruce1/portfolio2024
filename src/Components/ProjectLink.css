@@ -1,0 +1,28 @@
+.project-link {
+  background-color: var(--accent-blue);
+  border-radius: 8px;
+  width: 30%;
+  margin: 24px;
+  padding: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition-duration: .3s;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: var(--tldr-p-background-color);
+}
+
+.project-image-container {
+  border-radius: 6px;
+  background-position: top center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.project-title {
+  text-align: left;
+  margin-top: 4px;
+}

@@ -156,6 +156,19 @@
   padding:  10px 2em;
 }
 
+/* Projects Section */
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.projects-header {
+  width: 100%;
+}
+
 /* Technologies I've Used section */
 
 .tech-container-background {

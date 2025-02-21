@@ -24,30 +24,150 @@ import icon23 from './icon23.svg';
 import icon24 from './icon24.svg';
 
 const icons = [
-  { name: 'SQL', image: icon1 },
-  { name: 'AWS', image: icon2 },
-  { name: 'CSS3', image: icon3 },
-  { name: 'Git/GitHub', image: icon4 },
-  { name: 'HTML5', image: icon5 },
-  { name: 'Java', image: icon6 },
-  { name: 'JavaScript', image: icon7 },
-  { name: 'Jenkins', image: icon8 },
-  { name: 'JQuery', image: icon9 },
-  { name: 'ReactJS', image: icon10 },
-  { name: 'Ruby', image: icon11 },
-  { name: 'SCSS', image: icon12 },
-  { name: 'Circle CI', image: icon13 },
-  { name: 'Cucumber', image: icon14 },
-  { name: 'Python', image: icon15 },
-  { name: 'Playwright', image: icon16 },
-  { name: 'VueJS', image: icon17 },
-  { name: 'TypeScript', image: icon18 },
-  { name: 'NodeJS', image: icon19 },
-  { name: 'Redux', image: icon20 },
-  { name: 'Jest', image: icon21 },
-  { name: 'OpenAI', image: icon22 },
-  { name: 'Postman', image: icon23 },
-  { name: 'Agile', image: icon24 },
+  { 
+    name: 'SQL',
+    image: icon1, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'AWS',
+    image: icon2, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'CSS3',
+    image: icon3, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Git/GitHub',
+    image: icon4, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'HTML5',
+    image: icon5, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Java',
+    image: icon6, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'JavaScript',
+    image: icon7, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Jenkins',
+    image: icon8, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'JQuery',
+    image: icon9, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'ReactJS',
+    image: icon10, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Ruby',
+    image: icon11, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'SCSS',
+    image: icon12, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Circle CI',
+    image: icon13, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Cucumber',
+    image: icon14, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Python',
+    image: icon15, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Playwright',
+    image: icon16, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'VueJS',
+    image: icon17, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'TypeScript',
+    image: icon18, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'NodeJS',
+    image: icon19, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Redux',
+    image: icon20, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Jest',
+    image: icon21, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'OpenAI',
+    image: icon22, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Postman',
+    image: icon23, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
+  { 
+    name: 'Agile',
+    image: icon24, 
+    stars: 5, 
+    proficiency: "Proficiency Text"
+  },
 ];
 
 export default icons;

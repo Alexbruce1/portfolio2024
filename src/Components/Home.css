@@ -16,6 +16,14 @@
   text-align: left;
   margin-right: 2em;
   max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-text, 
+.home-image-container {
+  padding: 36px 0;
 }
 
 .home-headline {
@@ -29,6 +37,8 @@
   font-size: 120px;
   margin: 0;
   letter-spacing: -4px;
+  width: 100%;
+  text-align: left;
 }
 
 .main-paragraph {
@@ -43,7 +53,6 @@
 }
 
 .home-image-container {
-  padding: 3em 0;
   width: 40%;
 }
 
@@ -94,9 +103,15 @@
   transition-duration: .2s;
 }
 
+.home-link-tldr {
+  margin: auto 0;
+  text-align: center;
+  width: 40%;
+}
+
 .home-link:hover {
   background-color: #147efb;
-  color: var(--background-color);
+  color: var(--light-text);
   box-shadow: 10px 10px 20px rgba(var(--background-color), 1);
 }
 
@@ -141,6 +156,19 @@
   padding:  10px 2em;
 }
 
+/* Projects Section */
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.projects-header {
+  width: 100%;
+}
+
 /* Technologies I've Used section */
 
 .tech-container-background {
@@ -152,6 +180,31 @@
 .tech-container {
   border-radius: 1em;
   padding: 2em 0;
+}
+
+.tech-stack {
+  text-align: left;
+}
+
+.tech-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tech-icon-small {
+  height: 24px;
+}
+
+.technology-name {
+  font-weight: 700;
+  margin: 0 8px;
+}
+
+.star-container {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
 }
 
 .tech-logo-container {

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import profilePics from "../assets/me/profilePics"; 
-import icons from "../assets/tech-svgs/icons";
+import projects from "../assets/projects/Projects";
+import ProjectLink from "./ProjectLink";
 import "./Home.css";
 
 const pdfUrl = "https://abresume.s3.amazonaws.com/ABruceResume.pdf";
@@ -24,7 +25,7 @@ function Home({ isMobile }) {
             <p className="home-p main-paragraph">
               Hey, thanks for visiting my page! I'm a software developer based in Denver. I specialize in frontend web development, but I've spent my career so far in varioius areas including quality engineering and ERP application development.
             </p>
-            {!isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
+            {!isMobile && <Link className="home-link home-link-tldr" to={"/tldr"}>TL;DR</Link>}
           </div>
           {isMobile && <Link className="home-link" to={"/tldr"}>TL;DR</Link>}
           <div className="home-image-container">
@@ -65,16 +66,18 @@ function Home({ isMobile }) {
 
       <div className="tech-container-background">
         <div className="content-container">
-          <div className="tech-container">
-            <h2>Technologies I've used</h2>
-            <div className="tech-logo-container">
-              {icons.map(({ name, image }, index) => (
-                <div key={index} className="logo-group">
-                  <img src={image} loading="lazy" className="tech-icon" alt={name} />
-                  <p className="icon-name">{name}</p>
-                </div>
-              ))}
+          <div className="projects-container">
+            <div className="projects-header">
+              <h2 className="home-headline">Projects</h2>
             </div>
+            {projects && projects.map((project, index) => (
+              <ProjectLink 
+                title={project.title} 
+                description={project.description} 
+                image={project.image} 
+                url={project.url} 
+                github={project.github} />
+            ))}
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import profilePics from "../assets/me/profilePics"; 
 import projects from "../assets/projects/Projects";
-import icons from "../assets/tech-svgs/icons";
 import ProjectLink from "./ProjectLink";
 import "./Home.css";
 
